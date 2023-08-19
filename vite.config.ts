@@ -31,5 +31,13 @@ export default defineConfig({
   },
   server: {
     port: process.env.HISTOIRE ? 6006 : 3000
+  },
+  test: {
+    coverage: {
+      provider: 'v8',
+      include: ['src/**/*.{ts,vue}'],
+      statements: 100,
+      lines: 100
+    }
   }
 })
