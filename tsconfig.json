@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "env.d.ts",
+    "./src/**/*.ts",
+    "./src/**/*.vue",
+    "./scripts/**/*.ts",
+    "./histoire/**/*.ts",
+    "./histoire/**/*.vue"
+  ],
+  "exclude": ["node_modules"]
+}
