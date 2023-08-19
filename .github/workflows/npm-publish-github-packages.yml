@@ -1,7 +1,4 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
-
-name: Build and Publish Library
+name: Publish NPM Package
 
 on:
   push:
@@ -11,41 +8,23 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 6.0.2
-      - run: yarn install
-      - run: yarn build
-      - name: save build artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: lib
-          path: ./lib
-  publish-npm:
-    runs-on: ubuntu-latest
-    permissions:
-      packages: write
-    needs: build
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          registry-url: 'https://npm.pkg.github.com'
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 6.0.2
-      - name: download artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: lib
-          path: ./lib
-      - run: npm publish --no-git-checks --registry=https://npm.pkg.github.com
-        working-directory: ./lib
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Build Package
+        run: yarn build
+
+      - name: Publish to NPM
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+          yarn publish --access restricted
