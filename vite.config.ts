@@ -4,6 +4,7 @@ import componentsImport from 'unplugin-vue-components/vite'
 import dts from 'vite-plugin-dts'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import path from 'node:path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -24,14 +25,6 @@ export default defineConfig({
       entryRoot: './src'
     })
   ],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  },
-  server: {
-    port: process.env.HISTOIRE ? 6006 : 3000
-  },
   test: {
     coverage: {
       provider: 'v8',
@@ -39,5 +32,29 @@ export default defineConfig({
       statements: 100,
       lines: 100
     }
+  },
+  resolve: {
+    alias: {
+      '@lib': path.resolve(__dirname, './src/')
+    }
+  },
+  build: {
+    outDir: 'lib',
+    lib: {
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      name: 'dslib-pfe',
+      fileName: 'index'
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue'
+        }
+      }
+    }
+  },
+  server: {
+    port: process.env.HISTOIRE ? 6006 : 3000
   }
 })

@@ -6,17 +6,19 @@ const rl = readline.createInterface({
   output: process.stdout
 })
 
-let directories = []
+let directories: any[] = []
 
-rl.question('What is the name of the component? ', (componentName) => {
-  fs.readdir('src/components', { withFileTypes: true }, (err, files) => {
+rl.question('What is the name of the component? ', (componentName: any) => {
+  fs.readdir('src/components', { withFileTypes: true }, (err: any, files: any[]) => {
     if (err) {
       console.log(err)
       rl.close()
       return
     }
 
-    directories = files.filter((file) => file.isDirectory()).map((file) => file.name)
+    directories = files
+      .filter((file: { isDirectory: () => any }) => file.isDirectory())
+      .map((file: { name: any }) => file.name)
 
     directories.push('Create New Directory')
 
@@ -24,11 +26,11 @@ rl.question('What is the name of the component? ', (componentName) => {
       `Select the parent component directory? \n${directories
         .map((dir, index) => `${index + 1} - ${dir}`)
         .join('\n')}\n`,
-      (type) => {
+      (type: string) => {
         const selectedIndex = parseInt(type) - 1
 
         if (selectedIndex === directories.length - 1) {
-          rl.question('Enter the name of the new directory: ', (newDirectoryName) => {
+          rl.question('Enter the name of the new directory: ', (newDirectoryName: any) => {
             const newDirectoryPath = `src/components/${newDirectoryName}`
             fs.mkdirSync(newDirectoryPath, { recursive: true })
             createComponentInDirectory(newDirectoryName, componentName)
@@ -73,7 +75,7 @@ rl.question('What is the name of the component? ', (componentName) => {
   })
 })
 
-function createComponentInDirectory(directory, componentName) {
+function createComponentInDirectory(directory: any, componentName: any) {
   const componentPath = `src/components/${directory}/${componentName}`
 
   fs.mkdirSync(componentPath, { recursive: true })
