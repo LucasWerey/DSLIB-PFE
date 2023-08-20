@@ -27,4 +27,4 @@ jobs:
       - name: Publish to NPM
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
-          yarn publish --access restricted
+          npm publish

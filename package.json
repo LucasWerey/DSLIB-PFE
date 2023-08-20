@@ -1,6 +1,6 @@
 {
   "name": "@lucaswerey/dslib-pfe",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "private": false,
   "main": "./lib/index.umd.js",
   "module": "./lib/index.mjs",
@@ -21,7 +21,7 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@lucaswerey"
+    "@lucaswerey:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "dev": "vite",
