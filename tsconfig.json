@@ -24,7 +24,7 @@
     "./scripts/**/*.ts",
     "./histoire/**/*.ts",
     "./histoire/**/*.vue",
-    "scripts/create-component.js"
+    "scripts/create-component.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "./scripts/*.ts"]
 }

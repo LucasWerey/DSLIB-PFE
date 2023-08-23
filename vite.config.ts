@@ -1,4 +1,3 @@
-import { fileURLToPath, URL } from 'node:url'
 import autoImport from 'unplugin-auto-import/vite'
 import componentsImport from 'unplugin-vue-components/vite'
 import dts from 'vite-plugin-dts'

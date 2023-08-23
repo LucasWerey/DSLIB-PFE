@@ -10,5 +10,7 @@ declare module 'vue' {
     BulletPoints: typeof import('./components/Indicators/bulletPoints/bulletPoints.vue')['default']
     'BulletPoints.story': typeof import('./components/Indicators/bulletPoints/bulletPoints.story.vue')['default']
     ControlDescription: typeof import('./../histoire/components/internals/ControlDescription.vue')['default']
+    Loader: typeof import('./components/Indicators/Loader/Loader.vue')['default']
+    'Loader.story': typeof import('./components/Indicators/Loader/Loader.story.vue')['default']
   }
 }

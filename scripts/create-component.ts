@@ -50,17 +50,18 @@ rl.question('What is the name of the component? ', (componentName: any) => {
             fs.writeFileSync(`${componentPath}/${componentName}.model.ts`, '')
             fs.writeFileSync(
               `${componentPath}/${componentName}.story.vue`,
-              `<script setup lang="ts">\nimport '@/index.css';\n</script>`
+              `<template></template>\n<
+              script setup lang="ts"></script>`
             )
 
             fs.appendFileSync(
               `${componentPath}/index.ts`,
-              `export { default as ${componentName} } from './${componentName}.vue';\n`
+              `export { default } from './${componentName}.vue';\n`
             )
 
             fs.appendFileSync(
               'src/index.ts',
-              `export { ${componentName} } from './${componentPath}';\n`
+              `export { default as  ${componentName} } from './components/${selectedDirectory}/${componentName}';\n`
             )
 
             console.log(`Component ${componentName} created in ${selectedDirectory}`)
@@ -83,17 +84,21 @@ function createComponentInDirectory(directory: any, componentName: any) {
   fs.writeFileSync(`${componentPath}/${componentName}.vue`, '')
   fs.writeFileSync(
     `${componentPath}/${componentName}.story.vue`,
-    `<script setup lang="ts">\nimport '@/index.css';\n</script>`
+    `<template></template>\n<
+    script setup lang="ts"></script>`
   )
   fs.writeFileSync(`${componentPath}/${componentName}.spec.ts`, '')
   fs.writeFileSync(`${componentPath}/${componentName}.model.ts`, '')
 
   fs.appendFileSync(
     `${componentPath}/index.ts`,
-    `export { default as ${componentName} } from './${componentName}.vue';\n`
+    `export { default } from './${componentName}.vue';\n`
   )
 
-  fs.appendFileSync('src/index.ts', `export { ${componentName} } from '${componentPath}';\n`)
+  fs.appendFileSync(
+    'src/index.ts',
+    `export { default as  ${componentName} } from './components/${directory}/${componentName}';\n`
+  )
 
   console.log(`Component ${componentName} created in ${directory}`)
   rl.close()

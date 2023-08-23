@@ -34,13 +34,9 @@ import {
   BULLET_POINT_SIZE,
   BULLET_POINT_TYPE_DEFAULT,
   BULLET_POINT_TYPE
-} from '../bulletPoints/bulletPoints.model'
+} from './bulletPoints.model'
 
-import type {
-  BulletPointSize,
-  BulletPointColor,
-  BulletPointType
-} from '../bulletPoints/bulletPoints.model'
+import type { BulletPointSize, BulletPointColor, BulletPointType } from './bulletPoints.model'
 
 const props = defineProps({
   color: {
