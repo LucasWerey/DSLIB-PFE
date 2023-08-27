@@ -10,6 +10,10 @@ export default defineConfig({
       {
         title: 'Indicators',
         id: 'indicators'
+      },
+      {
+        title: 'Media',
+        id: 'media'
       }
     ]
   }

@@ -50,8 +50,8 @@ rl.question('What is the name of the component? ', (componentName: any) => {
             fs.writeFileSync(`${componentPath}/${componentName}.model.ts`, '')
             fs.writeFileSync(
               `${componentPath}/${componentName}.story.vue`,
-              `<template></template>\n<
-              script setup lang="ts"></script>`
+              `<template></template>\n
+              <script setup lang="ts"></script>`
             )
 
             fs.appendFileSync(
@@ -84,8 +84,8 @@ function createComponentInDirectory(directory: any, componentName: any) {
   fs.writeFileSync(`${componentPath}/${componentName}.vue`, '')
   fs.writeFileSync(
     `${componentPath}/${componentName}.story.vue`,
-    `<template></template>\n<
-    script setup lang="ts"></script>`
+    `<template></template>\n
+    <script setup lang="ts"></script>`
   )
   fs.writeFileSync(`${componentPath}/${componentName}.spec.ts`, '')
   fs.writeFileSync(`${componentPath}/${componentName}.model.ts`, '')

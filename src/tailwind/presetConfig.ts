@@ -62,3 +62,16 @@ export default Object.freeze({
     }
   ]
 })
+
+export const colorsPalette = {
+  transparent: 'transparent',
+  current: 'currentColor',
+  inherit: 'inherit',
+  test: '#00F2A5',
+  primary: '#000000',
+  'primary-light': '#00F2A5',
+  secondary: '#FFFFFF',
+  'secondary-light': '#00F2A5',
+  error: '#F22B00',
+  'error-light': '#00F2A5'
+}
