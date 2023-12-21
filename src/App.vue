@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import './assets/index.css'
+
+const name = ref<'home' | 'test'>('home')
 </script>
 
 <template>
-  <h1 class="DS-text-m text-error">Hello world!</h1>
-  <Test title="Hello world!" description="This is a description" />
+  <IconsBase :name="name" color="error" />
+  <button @click="name = 'test'">Change icon</button>
 </template>

@@ -25,17 +25,17 @@ const props = defineProps({
 
 const bgColorSecond = computed(() => {
   if (props.color === LOADER_COLOR.PRIMARY) {
-    return '#ffff'
+    return '#373F51'
   } else {
-    return '#000'
+    return '#ECECEC'
   }
 })
 
 const bgColorFirst = computed(() => {
   if (props.color === LOADER_COLOR.PRIMARY) {
-    return '#000'
+    return '#ECECEC'
   } else {
-    return '#ffff'
+    return '#373F51'
   }
 })
 

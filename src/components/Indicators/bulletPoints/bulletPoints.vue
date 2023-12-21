@@ -17,7 +17,7 @@
         'DS-text-xs': props.size === BULLET_POINT_SIZE.SMALL,
         'DS-text-m': props.size === BULLET_POINT_SIZE.MEDIUM,
         'DS-text-l': props.size === BULLET_POINT_SIZE.LARGE,
-        'text-primary': props.color === BULLET_POINT_COLOR.SECONDARY,
+        'text-basic-black': props.color === BULLET_POINT_COLOR.SECONDARY,
         'text-secondary': props.color === BULLET_POINT_COLOR.PRIMARY
       }"
     >
