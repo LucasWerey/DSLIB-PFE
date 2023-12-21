@@ -56,7 +56,7 @@ import {
   type IconsSize
 } from './IconsBase.model'
 
-import { colorsPalette } from '@lib/tailwind/presetConfig'
+import { colorsPalette } from '../../../tailwind/presetConfig'
 
 interface Props {
   name: IconsName

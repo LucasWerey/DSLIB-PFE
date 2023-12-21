@@ -1,4 +1,4 @@
-import type { colorsPalette } from '@lib/tailwind/presetConfig'
+import type { colorsPalette } from '../../../tailwind/presetConfig'
 
 export const ICONS_NAME = {
   logo: 'logo',
