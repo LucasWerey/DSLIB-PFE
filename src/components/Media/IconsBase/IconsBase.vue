@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import type { IconsName, IconsSize, IconsColor } from './IconsBase.model'
-import { colorsPalette } from '@lib/tailwind/presetConfig'
+import { colorsPalette } from '../../../tailwind/presetConfig'
 import { ICONS_SIZE, ICONS_COLOR_DEFAULT, ICONS_NAME } from './IconsBase.model'
 
 const props = defineProps({
@@ -25,8 +25,7 @@ const props = defineProps({
   },
   color: {
     type: String as PropType<IconsColor>,
-    default: ICONS_COLOR_DEFAULT,
-    validator: (value: string) => Object.keys(colorsPalette).includes(value as IconsColor)
+    default: ICONS_COLOR_DEFAULT
   },
   title: {
     type: String,
