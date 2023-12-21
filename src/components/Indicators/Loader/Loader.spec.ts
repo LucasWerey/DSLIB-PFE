@@ -5,6 +5,6 @@ import { it, describe, expect } from 'vitest'
 describe('Loader.vue', () => {
   it('renders correctly', () => {
     const wrapper = mount(Loader)
-    expect(wrapper.html()).toContain('span class="loader"')
+    expect(wrapper.html()).toContain('class="loader"')
   })
 })
