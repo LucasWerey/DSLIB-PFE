@@ -1,5 +1,9 @@
 <template>
-  <component :is="IconComponent" class="h-8 w-8 inline-block" :style="{ fill: iconColor, style }" />
+  <component
+    :is="IconComponent"
+    :class="{ [iconSize]: true, 'inline-block': true }"
+    :style="{ fill: props.name !== 'logo' ? iconColor : '', transform: iconTransform }"
+  />
 </template>
 
 <script setup lang="ts">
@@ -34,18 +38,35 @@ const props = defineProps({
   }
 })
 
-const IconComponent = computed(() => {
-  props.name
-  return defineAsyncComponent(() => import(`../../../assets/icons/${props.name}.svg`))
+let IconComponent = computed(() => {
+  return defineAsyncComponent(() => import(`../../../assets/icons/${props.name}.vue`))
 })
 
-const style = computed(() => {
-  return {
-    transform: `rotate(${props.rotate}deg)`
+watch(
+  () => props.name,
+  () => {
+    IconComponent = defineAsyncComponent(() => import(`../../../assets/icons/${props.name}.vue`))
   }
-})
+)
 
 const iconColor = computed(() => {
   return colorsPalette[props.color]
+})
+
+const iconTransform = computed(() => {
+  return props.rotate ? `rotate(${props.rotate}deg)` : ''
+})
+
+const iconSize = computed(() => {
+  switch (props.size) {
+    case ICONS_SIZE.small:
+      return 'h-4 w-4'
+    case ICONS_SIZE.medium:
+      return 'h-8 w-8'
+    case ICONS_SIZE.large:
+      return 'h-12 w-12'
+    default:
+      return 'h-8 w-8'
+  }
 })
 </script>

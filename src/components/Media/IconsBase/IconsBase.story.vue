@@ -2,9 +2,10 @@
   <Story
     title="Icons"
     group="media"
+    responsiveDisabled
     :layout="{
       type: 'grid',
-      width: '100%'
+      width: '11%'
     }"
   >
     <template #controls>
@@ -34,6 +35,15 @@
         :rotate="controls.rotate"
       />
     </Variant>
+    <Variant title="Logo" auto-props-disabled>
+      <IconsBase name="logo" :size="controls.size" />
+    </Variant>
+    <Variant title="Home" auto-props-disabled>
+      <IconsBase name="home" color="moonstone" :size="controls.size" />
+    </Variant>
+    <Variant title="Test" auto-props-disabled>
+      <IconsBase name="test" color="moonstone" :size="controls.size" />
+    </Variant>
   </Story>
 </template>
 <script setup lang="ts">
@@ -58,7 +68,7 @@ interface Props {
 
 const controls = reactive<Props>({
   name: ICONS_NAME.home,
-  size: ICONS_SIZE.medium,
+  size: ICONS_SIZE.large,
   color: ICONS_COLOR_DEFAULT,
   title: '',
   rotate: 0

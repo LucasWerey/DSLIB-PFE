@@ -5,6 +5,22 @@ export default defineConfig({
   plugins: [HstVue()],
   viteIgnorePlugins: ['vite:dts'],
   setupFile: './histoire.setup.ts',
+  theme: {
+    logo: {
+      square: './src/Logo.svg',
+      light: './src/Logo.svg',
+      dark: './src/Logo.svg'
+    },
+    hideColorSchemeSwitch: true
+  },
+
+  defaultStoryProps: {
+    layout: {
+      type: 'grid',
+      width: 300
+    }
+  },
+
   tree: {
     groups: [
       {
@@ -14,6 +30,10 @@ export default defineConfig({
       {
         title: 'Media',
         id: 'media'
+      },
+      {
+        title: 'CTA',
+        id: 'cta'
       }
     ]
   }

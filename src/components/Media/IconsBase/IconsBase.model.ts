@@ -1,6 +1,7 @@
 import type { colorsPalette } from '@lib/tailwind/presetConfig'
 
 export const ICONS_NAME = {
+  logo: 'logo',
   home: 'home',
   test: 'test'
 } as const
@@ -17,5 +18,5 @@ export const ICONS_SIZE = {
 export const ICONS_SIZES = Object.values(ICONS_SIZE)
 export type IconsSize = (typeof ICONS_SIZES)[number]
 
-export const ICONS_COLOR_DEFAULT = 'current'
+export const ICONS_COLOR_DEFAULT = 'moonstone'
 export type IconsColor = keyof typeof colorsPalette

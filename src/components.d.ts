@@ -10,6 +10,8 @@ declare module 'vue' {
     BulletPoints: typeof import('./components/Indicators/bulletPoints/bulletPoints.vue')['default']
     'BulletPoints.story': typeof import('./components/Indicators/bulletPoints/bulletPoints.story.vue')['default']
     ControlDescription: typeof import('./../histoire/components/internals/ControlDescription.vue')['default']
+    CtaButton: typeof import('./components/CTA/CtaButton/CtaButton.vue')['default']
+    'CtaButton.story': typeof import('./components/CTA/CtaButton/CtaButton.story.vue')['default']
     IconsBase: typeof import('./components/Media/IconsBase/IconsBase.vue')['default']
     'IconsBase.story': typeof import('./components/Media/IconsBase/IconsBase.story.vue')['default']
     Loader: typeof import('./components/Indicators/Loader/Loader.vue')['default']
