@@ -2,8 +2,13 @@ import type { colorsPalette } from '../../../tailwind/presetConfig'
 
 export const ICONS_NAME = {
   logo: 'logo',
-  home: 'home',
-  test: 'test'
+  moveRight: 'moveRight',
+  close: 'close',
+  warning: 'warning',
+  logout: 'logout',
+  upload: 'upload',
+  google: 'google',
+  linkedin: 'linkedin'
 } as const
 
 export const ICONS_NAMES = Object.values(ICONS_NAME)

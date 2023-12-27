@@ -38,11 +38,26 @@
     <Variant title="Logo" auto-props-disabled>
       <IconsBase name="logo" :size="controls.size" />
     </Variant>
-    <Variant title="Home" auto-props-disabled>
-      <IconsBase name="home" color="moonstone" :size="controls.size" />
+    <Variant title="moveRight" auto-props-disabled>
+      <IconsBase name="moveRight" color="moonstone" :size="controls.size" />
     </Variant>
-    <Variant title="Test" auto-props-disabled>
-      <IconsBase name="test" color="moonstone" :size="controls.size" />
+    <Variant title="close" auto-props-disabled>
+      <IconsBase name="close" color="moonstone" :size="controls.size" />
+    </Variant>
+    <Variant title="logout" auto-props-disabled>
+      <IconsBase name="logout" color="moonstone" :size="controls.size" />
+    </Variant>
+    <Variant title="warning" auto-props-disabled>
+      <IconsBase name="warning" color="moonstone" :size="controls.size" />
+    </Variant>
+    <Variant title="upload" auto-props-disabled>
+      <IconsBase name="upload" color="moonstone" :size="controls.size" />
+    </Variant>
+    <Variant title="linkedin" auto-props-disabled>
+      <IconsBase name="linkedin" :size="controls.size" />
+    </Variant>
+    <Variant title="google" auto-props-disabled>
+      <IconsBase name="google" :size="controls.size" />
     </Variant>
   </Story>
 </template>
@@ -67,7 +82,7 @@ interface Props {
 }
 
 const controls = reactive<Props>({
-  name: ICONS_NAME.home,
+  name: ICONS_NAME.logo,
   size: ICONS_SIZE.large,
   color: ICONS_COLOR_DEFAULT,
   title: '',

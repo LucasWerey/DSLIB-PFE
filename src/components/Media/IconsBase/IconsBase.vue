@@ -2,7 +2,8 @@
   <component
     :is="IconComponent"
     :class="{ [iconSize]: true, 'inline-block': true }"
-    :style="{ fill: props.name !== 'logo' ? iconColor : '', transform: iconTransform }"
+    :style="{ transform: iconTransform }"
+    :color="iconColor"
   />
 </template>
 
@@ -14,7 +15,7 @@ import { ICONS_SIZE, ICONS_COLOR_DEFAULT, ICONS_NAME } from './IconsBase.model'
 const props = defineProps({
   name: {
     type: String as PropType<IconsName>,
-    default: ICONS_NAME?.home ?? '',
+    default: ICONS_NAME?.logo ?? '',
     required: true,
     validator: (value: string) => Object.values(ICONS_NAME).includes(value as IconsName)
   },
