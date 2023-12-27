@@ -13,7 +13,6 @@
 </template>
 
 <script setup lang="ts">
-import { colorsPalette } from '@lib/tailwind/presetConfig'
 import {
   STEP_NUMBER,
   STEP_COLOR_DEFAULT,
