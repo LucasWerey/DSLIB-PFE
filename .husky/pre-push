@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn test --changed main --passWithNoTests --ignore '../src/components/Media/**/*'
+yarn test --changed main --passWithNoTests
