@@ -51,4 +51,16 @@ describe('CheckBox.vue', () => {
     })
     expect(wrapper.find('.hidden')).toBeTruthy()
   })
+  it('should hide overflow', async () => {
+    const wrapper = mount(CheckBox, {
+      props: {
+        size: CHECKBOX_SIZES[1],
+        form: CHECKBOX_FORMS[0],
+        state: CHECKBOX_STATES[1],
+        disabled: false,
+        hideOverflow: true
+      }
+    })
+    expect(wrapper.find('.overflow-hidden')).toBeTruthy()
+  })
 })
