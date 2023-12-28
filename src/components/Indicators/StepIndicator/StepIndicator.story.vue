@@ -10,13 +10,13 @@
   >
     <template #controls>
       <ControlDescription>
-        <HstSelect v-model="controls.number" :options="Object.values(STEP_NUMBER)" label="Number" />
+        <HstSelect v-model="controls.number" :options="Object.values(STEP_NUMBER)" title="Number" />
       </ControlDescription>
       <ControlDescription>
         <HstSelect
           v-model="controls.currentStep"
           :options="Object.values(STEP_NUMBER)"
-          label="Current Step"
+          title="Current Step"
         />
       </ControlDescription>
     </template>
@@ -45,7 +45,7 @@ interface Props {
 }
 
 const controls = reactive<Props>({
-  number: STEP_NUMBER.one,
+  number: STEP_NUMBER.three,
   color: STEP_COLOR_DEFAULT,
   status: STEP_STATUS[0],
   currentStep: STEP_NUMBER.two

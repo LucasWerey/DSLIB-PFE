@@ -5,6 +5,7 @@ const name = ref<'home' | 'test'>('home')
 </script>
 
 <template>
-  <IconsBase :name="name" color="error" />
-  <button @click="name = 'test'">Change icon</button>
+  <div class="w-10">
+    <CheckBox :color="'error'" :size="'medium'" :form="'rounded'" :state="'unchecked'" />
+  </div>
 </template>

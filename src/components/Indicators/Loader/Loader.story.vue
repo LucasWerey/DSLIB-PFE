@@ -2,10 +2,10 @@
   <Story title="Loader" group="indicators" :layout="{ type: 'grid', width: '100%' }">
     <template #controls>
       <ControlDescription>
-        <HstSelect v-model="controls.color" :options="Object.values(LOADER_COLOR)" label="Color" />
+        <HstSelect v-model="controls.color" :options="Object.values(LOADER_COLOR)" title="Color" />
       </ControlDescription>
       <ControlDescription>
-        <HstSelect v-model="controls.size" :options="Object.values(LOADER_SIZE)" label="Size" />
+        <HstSelect v-model="controls.size" :options="Object.values(LOADER_SIZE)" title="Size" />
       </ControlDescription>
     </template>
 
