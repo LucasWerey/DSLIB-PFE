@@ -5,25 +5,25 @@
         <HstSelect
           v-model="controls.color"
           :options="Object.values(BULLET_POINT_COLOR)"
-          label="Color"
+          title="Color"
         />
       </ControlDescription>
       <ControlDescription>
         <HstSelect
           v-model="controls.size"
           :options="Object.values(BULLET_POINT_SIZE)"
-          label="Size"
+          title="Size"
         />
       </ControlDescription>
       <ControlDescription>
         <HstSelect
           v-model="controls.type"
           :options="Object.values(BULLET_POINT_TYPES)"
-          label="Type"
+          title="Type"
         />
       </ControlDescription>
       <ControlDescription>
-        <HstNumber v-model="controls.label" label="Label" />
+        <HstNumber v-model="controls.label" title="Label" />
       </ControlDescription>
     </template>
 

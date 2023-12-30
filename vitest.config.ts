@@ -7,7 +7,15 @@ export default mergeConfig(
   defineConfig({
     test: {
       environment: 'jsdom',
-      exclude: [...configDefaults.exclude, 'e2e/*'],
+      watch: true,
+      coverage: {
+        exclude: [
+          ...configDefaults.exclude,
+          'e2e/*',
+          'src/tailwind/*',
+          'src/components/Media/IconsBase/*'
+        ]
+      },
       root: fileURLToPath(new URL('./', import.meta.url))
     }
   })

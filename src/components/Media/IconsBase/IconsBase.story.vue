@@ -10,19 +10,19 @@
   >
     <template #controls>
       <ControlDescription>
-        <HstSelect v-model="controls.name" :options="Object.values(ICONS_NAME)" label="Name" />
+        <HstSelect v-model="controls.name" :options="Object.values(ICONS_NAME)" title="Name" />
       </ControlDescription>
       <ControlDescription>
-        <HstSelect v-model="controls.size" :options="Object.values(ICONS_SIZE)" label="Size" />
+        <HstSelect v-model="controls.size" :options="Object.values(ICONS_SIZE)" title="Size" />
       </ControlDescription>
       <ControlDescription>
-        <HstSelect v-model="controls.color" :options="Object.keys(colorsPalette)" label="Color" />
+        <HstSelect v-model="controls.color" :options="Object.keys(colorsPalette)" title="Color" />
       </ControlDescription>
       <ControlDescription>
-        <HstText v-model="controls.title" label="Title" />
+        <HstText v-model="controls.title" title="Title" />
       </ControlDescription>
       <ControlDescription>
-        <HstNumber v-model="controls.rotate" label="Rotate" />
+        <HstNumber v-model="controls.rotate" title="Rotate" />
       </ControlDescription>
     </template>
 
@@ -41,6 +41,9 @@
     <Variant title="moveRight" auto-props-disabled>
       <IconsBase name="moveRight" color="moonstone" :size="controls.size" />
     </Variant>
+    <Variant title="moveLeft" auto-props-disabled>
+      <IconsBase name="moveLeft" color="moonstone" :size="controls.size" />
+    </Variant>
     <Variant title="close" auto-props-disabled>
       <IconsBase name="close" color="moonstone" :size="controls.size" />
     </Variant>
@@ -52,6 +55,30 @@
     </Variant>
     <Variant title="upload" auto-props-disabled>
       <IconsBase name="upload" color="moonstone" :size="controls.size" />
+    </Variant>
+    <Variant title="chevronUp" auto-props-disabled>
+      <IconsBase name="chevronUp" color="moonstone" :size="controls.size" />
+    </Variant>
+    <Variant title="chevronDown" auto-props-disabled>
+      <IconsBase name="chevronDown" color="moonstone" :size="controls.size" />
+    </Variant>
+    <Variant title="calendar" auto-props-disabled>
+      <IconsBase name="calendar" color="moonstone" :size="controls.size" />
+    </Variant>
+    <Variant title="check" auto-props-disabled>
+      <IconsBase name="check" color="moonstone" :size="controls.size" />
+    </Variant>
+    <Variant title="pencil" auto-props-disabled>
+      <IconsBase name="pencil" color="moonstone" :size="controls.size" />
+    </Variant>
+    <Variant title="plus" auto-props-disabled>
+      <IconsBase name="plus" color="moonstone" :size="controls.size" />
+    </Variant>
+    <Variant title="trash" auto-props-disabled>
+      <IconsBase name="trash" color="moonstone" :size="controls.size" />
+    </Variant>
+    <Variant title="info" auto-props-disabled>
+      <IconsBase name="info" color="moonstone" :size="controls.size" />
     </Variant>
     <Variant title="linkedin" auto-props-disabled>
       <IconsBase name="linkedin" :size="controls.size" />
