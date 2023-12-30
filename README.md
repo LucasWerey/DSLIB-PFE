@@ -6,7 +6,7 @@
 
 <br>
 
-![version](https://img.shields.io/badge/version-0.0.0-blue)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/LucasWerey/DSLIB-PFE?color=blue)
 
 > This repository is used as a component library for the development of our end-of-study application at ECE PARIS. It was developed in Vue3 with Histoire.dev and vite. This facilitates communication between the UX/UI team and the front-end developer.
 
@@ -34,7 +34,7 @@ _You will be able to see all our components locally_
 
 ## Testing
 
-![check-code-coverage](https://img.shields.io/badge/code--coverage-100%25-green)
+![check-code-coverage](https://img.shields.io/badge/code--coverage-100%25-blue)
 
 To ensure that our components work properly, unit tests with vitest are carried out each time a new component is added.
 
