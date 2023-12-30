@@ -6,7 +6,7 @@
 
 <br>
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/LucasWerey/DSLIB-PFE?color=blue)
+![GitHub package.json npm version](https://img.shields.io/github/package-json/v/LucasWerey/DSLIB-PFE?color=blue&label=npm)
 [![Publish NPM Package](https://github.com/LucasWerey/DSLIB-PFE/actions/workflows/npm-publish-github-packages.yml/badge.svg?branch=main)](https://github.com/LucasWerey/DSLIB-PFE/actions/workflows/npm-publish-github-packages.yml)
 
 
