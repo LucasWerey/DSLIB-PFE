@@ -7,6 +7,8 @@
 <br>
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/LucasWerey/DSLIB-PFE?color=blue)
+[![Publish NPM Package](https://github.com/LucasWerey/DSLIB-PFE/actions/workflows/npm-publish-github-packages.yml/badge.svg?branch=main)](https://github.com/LucasWerey/DSLIB-PFE/actions/workflows/npm-publish-github-packages.yml)
+
 
 > This repository is used as a component library for the development of our end-of-study application at ECE PARIS. It was developed in Vue3 with Histoire.dev and vite. This facilitates communication between the UX/UI team and the front-end developer.
 
@@ -33,8 +35,6 @@ yarn histoire dev
 _You will be able to see all our components locally_
 
 ## Testing
-
-![check-code-coverage](https://img.shields.io/badge/code--coverage-100%25-blue)
 
 To ensure that our components work properly, unit tests with vitest are carried out each time a new component is added.
 
