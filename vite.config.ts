@@ -4,6 +4,7 @@ import dts from 'vite-plugin-dts'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'node:path'
+require('dotenv').config()
 
 // https://vitejs.dev/config/
 export default defineConfig({
