@@ -26,5 +26,5 @@ jobs:
 
       - name: Publish to NPM
         run: |
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
+          npm config set //npm.pkg.github.com/:_authToken=${{ secrets.PUBLISH }}
           npm publish
