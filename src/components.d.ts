@@ -18,7 +18,5 @@ declare module 'vue' {
     'Loader.story': typeof import('./components/Indicators/Loader/Loader.story.vue')['default']
     StepIndicator: typeof import('./components/Indicators/StepIndicator/StepIndicator.vue')['default']
     'StepIndicator.story': typeof import('./components/Indicators/StepIndicator/StepIndicator.story.vue')['default']
-    ToggleButton: typeof import('./components/CTA/ToggleButton/ToggleButton.vue')['default']
-    'ToggleButton.story': typeof import('./components/CTA/ToggleButton/ToggleButton.story.vue')['default']
   }
 }
