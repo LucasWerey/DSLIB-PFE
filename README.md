@@ -1,52 +1,64 @@
-# dslib-pfe
+# Components Library for End-of-study project
 
-This template should help get you started developing with Vue 3 in Vite.
+![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-## Recommended IDE Setup
+<br>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+![version](https://img.shields.io/badge/version-0.0.0-blue)
 
-## Type Support for `.vue` Imports in TS
+> This repository is used as a component library for the development of our end-of-study application at ECE PARIS. It was developed in Vue3 with Histoire.dev and vite. This facilitates communication between the UX/UI team and the front-end developer.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+> > We use our own tailwind configuration based on our Design System
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Clone the repository
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+```bash
+git clone https://github.com/LucasWerey/DSLIB-PFE.git
+```
 
-## Customize configuration
+## Install the dependancies
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 yarn
 ```
 
-### Compile and Hot-Reload for Development
+## Run the Lib
 
-```sh
-yarn dev
+```bash
+yarn histoire dev
 ```
 
-### Type-Check, Compile and Minify for Production
+_You will be able to see all our components locally_
 
-```sh
-yarn build
+## Testing
+
+![check-code-coverage](https://img.shields.io/badge/code--coverage-100%25-green)
+
+To ensure that our components work properly, unit tests with vitest are carried out each time a new component is added.
+
+```bash
+yarn test
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## Create a new component
 
-```sh
-yarn test:unit
+We have a script to simplify the creation of new component. <br>
+_To update the script go in scripts folder and create-component.ts file_
+
+```bash
+yarn create:component
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Import the library to your main project
 
-```sh
-yarn lint
+You will find the last version of the library here : https://github.com/LucasWerey/DSLIB-PFE/pkgs/npm/dslib-pfe
+
+In your main project import the library :
+
+```bash
+yarn add @lucaswerey/dslib-pfe@0.0.34
 ```
+
+![Alt text](image.png)
