@@ -1,4 +1,4 @@
 module.exports = {
   content: ['./src/**/*.vue'],
-  presets: [require('./src/tailwind/preset.ts')]
+  presets: [require('./src/tailwind/preset.js')]
 }

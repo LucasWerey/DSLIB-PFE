@@ -2,8 +2,8 @@
   <div
     class="flex items-center justify-center overflow-hidden"
     :class="{
-      'bg-primary': props.color === BULLET_POINT_COLOR.PRIMARY,
-      'bg-secondary': props.color === BULLET_POINT_COLOR.SECONDARY,
+      'bg-primary-moonstone': props.color === BULLET_POINT_COLOR.PRIMARY,
+      'bg-primary-powder': props.color === BULLET_POINT_COLOR.SECONDARY,
       'h-3 w-3': props.size === BULLET_POINT_SIZE.SMALL,
       'h-4 w-4': props.size === BULLET_POINT_SIZE.MEDIUM,
       'h-5 w-5': props.size === BULLET_POINT_SIZE.LARGE,
@@ -18,7 +18,7 @@
         'DS-text-m': props.size === BULLET_POINT_SIZE.MEDIUM,
         'DS-text-l': props.size === BULLET_POINT_SIZE.LARGE,
         'text-basic-black': props.color === BULLET_POINT_COLOR.SECONDARY,
-        'text-secondary': props.color === BULLET_POINT_COLOR.PRIMARY
+        'text-basic-verylightgrey': props.color === BULLET_POINT_COLOR.PRIMARY
       }"
     >
       {{ props.label }}
