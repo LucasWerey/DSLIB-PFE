@@ -11,9 +11,11 @@ export default defineConfig({
       light: './src/Logo.svg',
       dark: './src/Logo.svg'
     },
+
+    logoHref: 'https://dslibpfe.vercel.app/',
+    favicon: './public/Logo.svg',
     hideColorSchemeSwitch: true
   },
-
   defaultStoryProps: {
     layout: {
       type: 'grid',

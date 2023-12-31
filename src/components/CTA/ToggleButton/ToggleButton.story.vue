@@ -31,7 +31,6 @@
     </Variant>
   </Story>
 </template>
-
 <script setup lang="ts">
 import type { ToggleButtonState } from './ToggleButton.model'
 import { TOGGLEBUTTON_STATES, TOGGLEBUTTON_STATE_DEFAULT } from './ToggleButton.model'
