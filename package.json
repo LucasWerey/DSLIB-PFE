@@ -1,6 +1,6 @@
 {
   "name": "@lucaswerey/dslib-pfe",
-  "version": "0.0.38",
+  "version": "0.0.39",
   "private": false,
   "main": "./lib/index.umd.js",
   "module": "./lib/index.mjs",
@@ -38,7 +38,8 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "create:component": "ts-node ./scripts/create-component.ts"
+    "create:component": "ts-node ./scripts/create-component.ts",
+    "generate:tailwind": "tsc src/tailwind/preset.ts"
   },
   "dependencies": {
     "@vitest/coverage-v8": "^0.34.2",

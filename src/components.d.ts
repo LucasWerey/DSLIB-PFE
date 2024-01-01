@@ -9,6 +9,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     BulletPoints: typeof import('./components/Indicators/bulletPoints/bulletPoints.vue')['default']
     'BulletPoints.story': typeof import('./components/Indicators/bulletPoints/bulletPoints.story.vue')['default']
+    Button: typeof import('./components/CTA/Button/Button.vue')['default']
+    'Button.story': typeof import('./components/CTA/Button/Button.story.vue')['default']
     CheckBox: typeof import('./components/CTA/CheckBox/CheckBox.vue')['default']
     'CheckBox.story': typeof import('./components/CTA/CheckBox/CheckBox.story.vue')['default']
     ControlDescription: typeof import('./../histoire/components/internals/ControlDescription.vue')['default']
