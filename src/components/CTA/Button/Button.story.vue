@@ -39,80 +39,84 @@
         >Hello</Button
       >
     </Variant>
-    <Variant title="Default fill">
+    <Variant title="Default fill" auto-props-disabled>
       <Button type="default" state="active" styled="fill">Default</Button>
     </Variant>
-    <Variant title="Default fill icon trailing">
+    <Variant title="Default fill icon trailing" auto-props-disabled>
       <Button type="default" state="active" styled="fill" icon-position="trailing">Default</Button>
     </Variant>
-    <Variant title="Default fill icon leading">
+    <Variant title="Default fill icon leading" auto-props-disabled>
       <Button type="default" state="active" styled="fill" icon-position="leading">Default</Button>
     </Variant>
-    <Variant title="Default fill disabled">
+    <Variant title="Default fill disabled" auto-props-disabled>
       <Button type="default" state="disabled" styled="fill">disabled</Button>
     </Variant>
-    <Variant title="Default fill disabled icon trailing">
+    <Variant title="Default fill disabled icon trailing" auto-props-disabled>
       <Button type="default" state="disabled" styled="fill" icon-position="trailing"
         >Default</Button
       >
     </Variant>
-    <Variant title="Default fill disabled icon leading">
+    <Variant title="Default fill disabled icon leading" auto-props-disabled>
       <Button type="default" state="disabled" styled="fill" icon-position="leading">Default</Button>
     </Variant>
-    <Variant title="Outlined">
+    <Variant title="Outlined" auto-props-disabled>
       <Button type="default" state="active" styled="outlined">Outlined</Button>
     </Variant>
-    <Variant title="Outlined icon trailing">
+    <Variant title="Outlined icon trailing" auto-props-disabled>
       <Button type="default" state="active" styled="outlined" icon-position="trailing"
         >Outlined</Button
       >
     </Variant>
-    <Variant title="Outlined icon leading">
+    <Variant title="Outlined icon leading" auto-props-disabled>
       <Button type="default" state="active" styled="outlined" icon-position="leading"
         >Outlined</Button
       >
     </Variant>
-    <Variant title="Outlined disabled">
+    <Variant title="Outlined disabled" auto-props-disabled>
       <Button type="default" state="disabled" styled="outlined">Outlined disabled</Button>
     </Variant>
-    <Variant title="Outlined disabled icon trailing">
+    <Variant title="Outlined disabled icon trailing" auto-props-disabled>
       <Button type="default" state="disabled" styled="outlined" icon-position="trailing"
         >Outlined Disabled</Button
       >
     </Variant>
-    <Variant title="Outlined disabled icon leading">
+    <Variant title="Outlined disabled icon leading" auto-props-disabled>
       <Button type="default" state="disabled" styled="outlined" icon-position="leading"
         >Outlined Disabled</Button
       >
     </Variant>
-    <Variant title="Off">
+    <Variant title="Off" auto-props-disabled>
       <Button type="default" state="active" styled="off">Off</Button>
     </Variant>
-    <Variant title="Off icon trailing">
+    <Variant title="Off icon trailing" auto-props-disabled>
       <Button type="default" state="active" icon-position="trailing" styled="off">Off</Button>
     </Variant>
-    <Variant title="Off icon leading">
+    <Variant title="Off icon leading" auto-props-disabled>
       <Button type="default" state="active" icon-position="leading" styled="off">Off</Button>
     </Variant>
-    <Variant title="Off disabled">
+    <Variant title="Off disabled" auto-props-disabled>
       <Button type="default" state="disabled" styled="off">Off disabled</Button>
     </Variant>
-    <Variant title="Off disabled icon trailing">
-      <Button type="default" state="disabled" icon-position="trailing" styled="off">Off disabled</Button>
+    <Variant title="Off disabled icon trailing" auto-props-disabled>
+      <Button type="default" state="disabled" icon-position="trailing" styled="off"
+        >Off disabled</Button
+      >
     </Variant>
-    <Variant title="Off disabled icon leading">
-      <Button type="default" state="disabled" icon-position="leading" styled="off">Off disabled</Button>
+    <Variant title="Off disabled icon leading" auto-props-disabled>
+      <Button type="default" state="disabled" icon-position="leading" styled="off"
+        >Off disabled</Button
+      >
     </Variant>
-    <Variant title="Linkedin leading">
+    <Variant title="Linkedin leading" auto-props-disabled>
       <Button type="socialMedia" icon="linkedin" icon-position="leading">LinkedIn</Button>
     </Variant>
-    <Variant title="Linkedin trailing">
+    <Variant title="Linkedin trailing" auto-props-disabled>
       <Button type="socialMedia" icon="linkedin" icon-position="trailing">LinkedIn</Button>
     </Variant>
-    <Variant title="Google leading">
+    <Variant title="Google leading" auto-props-disabled>
       <Button type="socialMedia" icon="google" icon-position="leading">Google</Button>
     </Variant>
-    <Variant title="Google trailing">
+    <Variant title="Google trailing" auto-props-disabled>
       <Button type="socialMedia" icon="google" icon-position="trailing">Google</Button>
     </Variant>
   </Story>

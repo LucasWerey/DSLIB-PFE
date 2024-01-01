@@ -5,8 +5,10 @@
     :class="{
       'w-[375px] h-12 rounded justify-center items-center gap-4  border-2':
         !isOffAndActive && !isOffAndDisabled,
-      'bg-primary-moonstone text-basic-white': isFilledAndActive && !isMediaButton,
-      'bg-basic-grey text-basic-white cursor-not-allowed': isFilledAndDisabled && !isMediaButton,
+      'bg-primary-moonstone text-basic-white border-primary-moonstone':
+        isFilledAndActive && !isMediaButton,
+      'bg-basic-grey text-basic-white cursor-not-allowed border-basic-grey':
+        isFilledAndDisabled && !isMediaButton,
       'bg-basic-white text-primary-moonstone border-primary-moonstone':
         isOutlinedAndActive && !isMediaButton,
       'bg-basic-white text-basic-grey border-basic-grey cursor-not-allowed':
