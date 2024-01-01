@@ -2,4 +2,6 @@
 import './assets/index.css'
 </script>
 
-<template></template>
+<template>
+  <Button type="default" state="active" styled="fill">fill</Button>
+</template>
