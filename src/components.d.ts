@@ -18,6 +18,8 @@ declare module 'vue' {
     'IconsBase.story': typeof import('./components/Media/IconsBase/IconsBase.story.vue')['default']
     Loader: typeof import('./components/Indicators/Loader/Loader.vue')['default']
     'Loader.story': typeof import('./components/Indicators/Loader/Loader.story.vue')['default']
+    SnackBar: typeof import('./components/Indicators/SnackBar/SnackBar.vue')['default']
+    'SnackBar.story': typeof import('./components/Indicators/SnackBar/SnackBar.story.vue')['default']
     StepIndicator: typeof import('./components/Indicators/StepIndicator/StepIndicator.vue')['default']
     'StepIndicator.story': typeof import('./components/Indicators/StepIndicator/StepIndicator.story.vue')['default']
     ToggleButton: typeof import('./components/CTA/ToggleButton/ToggleButton.vue')['default']
