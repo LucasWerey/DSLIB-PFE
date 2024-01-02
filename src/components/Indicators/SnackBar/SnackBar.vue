@@ -49,17 +49,11 @@ const props = defineProps({
   }
 })
 
-const type = computed(() => {
-  return props.type
-})
+const type = computed(() => props.type)
 
-const size = computed(() => {
-  return props.size
-})
+const size = computed(() => props.size)
 
-const close = computed(() => {
-  return props.close === 'yes' ? true : false
-})
+const close = computed(() => (props.close === 'yes' ? true : false))
 
 const setColor = {
   info: 'bg-primary-moonstone',
@@ -67,16 +61,12 @@ const setColor = {
   error: 'bg-error'
 }
 
-const color = computed(() => {
-  return setColor[type.value]
-})
+const color = computed(() => setColor[type.value])
 
 const setSize = {
   small: 'h-12',
   medium: 'h-16'
 }
 
-const height = computed(() => {
-  return setSize[size.value]
-})
+const height = computed(() => setSize[size.value])
 </script>

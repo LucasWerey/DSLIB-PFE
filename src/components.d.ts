@@ -7,6 +7,8 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Avatar: typeof import('./components/Media/Avatar/Avatar.vue')['default']
+    'Avatar.story': typeof import('./components/Media/Avatar/Avatar.story.vue')['default']
     BulletPoints: typeof import('./components/Indicators/bulletPoints/bulletPoints.vue')['default']
     'BulletPoints.story': typeof import('./components/Indicators/bulletPoints/bulletPoints.story.vue')['default']
     Button: typeof import('./components/CTA/Button/Button.vue')['default']

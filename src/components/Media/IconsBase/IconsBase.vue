@@ -38,9 +38,9 @@ const props = defineProps({
   }
 })
 
-let IconComponent = computed(() => {
-  return defineAsyncComponent(() => import(`../../../assets/icons/${props.name}.vue`))
-})
+let IconComponent = computed(() =>
+  defineAsyncComponent(() => import(`../../../assets/icons/${props.name}.vue`))
+)
 
 watch(
   () => props.name,
@@ -49,13 +49,9 @@ watch(
   }
 )
 
-const iconColor = computed(() => {
-  return colorsPalette[props.color]
-})
+const iconColor = computed(() => colorsPalette[props.color])
 
-const iconTransform = computed(() => {
-  return props.rotate ? `rotate(${props.rotate}deg)` : ''
-})
+const iconTransform = computed(() => (props.rotate ? `rotate(${props.rotate}deg)` : ''))
 
 const iconSize = computed(() => {
   switch (props.size) {
