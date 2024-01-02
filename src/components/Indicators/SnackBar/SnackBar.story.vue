@@ -29,13 +29,18 @@
         :type="controls.type"
         :size="controls.size"
         :close="controls.close"
-        @close="(arg) => logEvent('Close', arg)"
+        @close="(arg: boolean) => logEvent('Close', arg)"
       >
         Lorem ipsum consectetur. Lorem ipsum consectetur.
       </SnackBar>
     </Variant>
     <Variant title="Info medium close" auto-props-disabled>
-      <SnackBar type="info" size="medium" close="yes" @close="(arg) => logEvent('Close', arg)">
+      <SnackBar
+        type="info"
+        size="medium"
+        close="yes"
+        @close="(arg: boolean) => logEvent('Close', arg)"
+      >
         Lorem ipsum consectetur. Lorem ipsum consectetur.
       </SnackBar>
     </Variant>
@@ -45,7 +50,12 @@
       </SnackBar>
     </Variant>
     <Variant title="Validation" auto-props-disabled>
-      <SnackBar type="validation" size="small" close="yes" @close="(arg) => logEvent('Close', arg)">
+      <SnackBar
+        type="validation"
+        size="small"
+        close="yes"
+        @close="(arg: boolean) => logEvent('Close', arg)"
+      >
         Lorem ipsum consectetur. Lorem ipsum consectetur.
       </SnackBar>
     </Variant>
