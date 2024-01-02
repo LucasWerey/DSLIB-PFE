@@ -9,11 +9,7 @@
         :class="avatarSize"
       />
       <div v-if="isInitialType" class="text-basic-white" :class="textSize"><slot /></div>
-      <img
-        v-if="isNotConnectedType"
-        src="../../../assets/images/NotConnected.png"
-        alt="not connected avatar"
-      />
+      <img v-if="isNotConnectedType" src="./NotConnected.png" alt="not connected avatar" />
     </div>
   </div>
 </template>
