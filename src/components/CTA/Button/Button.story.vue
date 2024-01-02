@@ -5,7 +5,7 @@
     responsiveDisabled
     :layout="{
       type: 'grid',
-      width: '50%'
+      width: '45%'
     }"
   >
     <template #controls>
