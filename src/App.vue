@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import './assets/index.css'
 import SnackBar from './components/Indicators/SnackBar'
+import Avatar from './components/Media/Avatar'
 
 const isVisible = ref(true)
 
@@ -31,4 +32,8 @@ const consoleLog = (arg: boolean) => {
     >
     <SnackBar type="error" size="small" close="no">Oui</SnackBar>
   </div>
+
+  <Avatar type="photo" size="xlarge" src="https://picsum.photos/200/300" alt="avatar" />
+  <Avatar type="notConnected" size="xlarge" />
+  <Avatar type="initial" size="xlarge">YO</Avatar>
 </template>

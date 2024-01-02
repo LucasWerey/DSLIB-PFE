@@ -25,17 +25,18 @@ export default defineConfig({
       entryRoot: './src'
     })
   ],
+  resolve: {
+    alias: {
+      '@lib': path.resolve(__dirname, './src/'),
+      '@img': path.resolve(__dirname, './src/assets/images')
+    }
+  },
   test: {
     coverage: {
       provider: 'v8',
       include: ['src/**/*.{ts,vue}'],
       statements: 100,
       lines: 100
-    }
-  },
-  resolve: {
-    alias: {
-      '@lib': path.resolve(__dirname, './src/')
     }
   },
   build: {

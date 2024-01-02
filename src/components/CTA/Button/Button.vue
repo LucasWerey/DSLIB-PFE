@@ -77,57 +77,33 @@ const props = defineProps({
   }
 })
 
-const style = computed(() => {
-  return props.styled
-})
+const style = computed(() => props.styled)
 
-const type = computed(() => {
-  return props.type
-})
+const type = computed(() => props.type)
 
-const state = computed(() => {
-  return props.state
-})
+const state = computed(() => props.state)
 
-const icon = computed(() => {
-  return props.icon
-})
+const icon = computed(() => props.icon)
 
-const iconPosition = computed(() => {
-  return props.iconPosition
-})
+const iconPosition = computed(() => props.iconPosition)
 
-const isFilledAndActive = computed(() => {
-  return style.value === 'fill' && state.value === 'active'
-})
+const isFilledAndActive = computed(() => style.value === 'fill' && state.value === 'active')
 
-const isFilledAndDisabled = computed(() => {
-  return style.value === 'fill' && state.value === 'disabled'
-})
+const isFilledAndDisabled = computed(() => style.value === 'fill' && state.value === 'disabled')
 
-const isOutlinedAndActive = computed(() => {
-  return style.value === 'outlined' && state.value === 'active'
-})
+const isOutlinedAndActive = computed(() => style.value === 'outlined' && state.value === 'active')
 
-const isOutlinedAndDisabled = computed(() => {
-  return style.value === 'outlined' && state.value === 'disabled'
-})
+const isOutlinedAndDisabled = computed(
+  () => style.value === 'outlined' && state.value === 'disabled'
+)
 
-const isOffAndActive = computed(() => {
-  return style.value === 'off' && state.value === 'active'
-})
+const isOffAndActive = computed(() => style.value === 'off' && state.value === 'active')
 
-const isOffAndDisabled = computed(() => {
-  return style.value === 'off' && state.value === 'disabled'
-})
+const isOffAndDisabled = computed(() => style.value === 'off' && state.value === 'disabled')
 
-const isMediaButton = computed(() => {
-  return type.value === 'socialMedia'
-})
+const isMediaButton = computed(() => type.value === 'socialMedia')
 
-const isIconTrailing = computed(() => {
-  return iconPosition.value === 'trailing'
-})
+const isIconTrailing = computed(() => iconPosition.value === 'trailing')
 
 const iconColor = computed(() => {
   if (isFilledAndActive.value || isFilledAndDisabled.value) return 'white'

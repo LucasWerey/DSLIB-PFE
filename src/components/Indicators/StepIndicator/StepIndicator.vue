@@ -43,11 +43,7 @@ const props = defineProps({
   }
 })
 
-const stepNumber = computed(() => {
-  return props.number
-})
+const stepNumber = computed(() => props.number)
 
-const currentStep = computed(() => {
-  return props.currentStep
-})
+const currentStep = computed(() => props.currentStep)
 </script>
