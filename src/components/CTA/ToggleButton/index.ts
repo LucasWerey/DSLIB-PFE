@@ -1,1 +1,1 @@
-export { default } from './ToggleButton.vue';
+export { default } from './ToggleButton.vue'

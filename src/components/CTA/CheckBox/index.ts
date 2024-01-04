@@ -1,1 +1,1 @@
-export { default } from './CheckBox.vue';
+export { default } from './CheckBox.vue'

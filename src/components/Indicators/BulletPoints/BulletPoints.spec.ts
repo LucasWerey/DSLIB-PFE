@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import BulletPoint from './bulletPoints.vue'
+import BulletPoint from './BulletPoints.vue'
 import { it, describe, expect } from 'vitest'
 
 describe('BulletPoint', () => {

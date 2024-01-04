@@ -49,7 +49,7 @@ import {
   type BulletPointType,
   type BulletPointColor,
   type BulletPointSize
-} from './bulletPoints.model'
+} from './BulletPoints.model'
 
 interface Controls {
   color: BulletPointColor

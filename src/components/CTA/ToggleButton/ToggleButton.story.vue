@@ -42,6 +42,4 @@ interface Props {
 const controls = reactive<Props>({
   state: TOGGLEBUTTON_STATE_DEFAULT
 })
-
-const emit = defineEmits(['update:state'])
 </script>

@@ -1,6 +1,6 @@
 {
   "name": "@lucaswerey/dslib-pfe",
-  "version": "0.0.45",
+  "version": "0.0.46",
   "private": false,
   "main": "./lib/index.umd.js",
   "module": "./lib/index.mjs",
@@ -34,6 +34,7 @@
     "histoire:preview": "histoire preview",
     "test": "vitest run --coverage",
     "test:unit": "vitest",
+    "coverage-badge": "yarn test && node ./scripts/coverage-badge.js",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
@@ -52,7 +53,7 @@
     "unplugin-vue-components": "^0.25.1",
     "vite-plugin-dts": "^3.5.2",
     "vite-svg-loader": "^4.0.0",
-    "vue": "^3.3.4"
+    "vue": "^3.0.0"
   },
   "peerDependencies": {
     "vue": "^3.0.0"
@@ -71,6 +72,7 @@
     "@vue/tsconfig": "^0.4.0",
     "eslint": "^8.46.0",
     "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-filename-rules": "^1.3.1",
     "eslint-plugin-vue": "^9.16.1",
     "histoire": "^0.16.5",
     "husky": "^8.0.3",

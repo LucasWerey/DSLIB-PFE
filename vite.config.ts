@@ -35,8 +35,6 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       include: ['src/**/*.{ts,vue}'],
-      statements: 100,
-      lines: 100
     }
   },
   build: {

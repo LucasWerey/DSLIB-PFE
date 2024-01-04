@@ -1,1 +1,1 @@
-export { default } from './StepIndicator.vue';
+export { default } from './StepIndicator.vue'
