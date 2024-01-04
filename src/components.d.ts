@@ -9,8 +9,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     Avatar: typeof import('./components/Media/Avatar/Avatar.vue')['default']
     'Avatar.story': typeof import('./components/Media/Avatar/Avatar.story.vue')['default']
-    BulletPoints: typeof import('./components/Indicators/bulletPoints/bulletPoints.vue')['default']
-    'BulletPoints.story': typeof import('./components/Indicators/bulletPoints/bulletPoints.story.vue')['default']
+    BulletPoints: typeof import('./components/Indicators/BulletPoints/BulletPoints.vue')['default']
+    'BulletPoints.story': typeof import('./components/Indicators/BulletPoints/BulletPoints.story.vue')['default']
     Button: typeof import('./components/CTA/Button/Button.vue')['default']
     'Button.story': typeof import('./components/CTA/Button/Button.story.vue')['default']
     CheckBox: typeof import('./components/CTA/CheckBox/CheckBox.vue')['default']
@@ -26,5 +26,7 @@ declare module 'vue' {
     'StepIndicator.story': typeof import('./components/Indicators/StepIndicator/StepIndicator.story.vue')['default']
     ToggleButton: typeof import('./components/CTA/ToggleButton/ToggleButton.vue')['default']
     'ToggleButton.story': typeof import('./components/CTA/ToggleButton/ToggleButton.story.vue')['default']
+    VideoPlayer: typeof import('./components/Media/VideoPlayer/VideoPlayer.vue')['default']
+    'VideoPlayer.story': typeof import('./components/Media/VideoPlayer/VideoPlayer.story.vue')['default']
   }
 }

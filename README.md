@@ -7,6 +7,7 @@
 
 ![GitHub package.json npm version](https://img.shields.io/github/package-json/v/LucasWerey/DSLIB-PFE?color=blue&label=npm)
 [![Publish NPM Package](https://github.com/LucasWerey/DSLIB-PFE/actions/workflows/npm-publish-github-packages.yml/badge.svg?branch=main)](https://github.com/LucasWerey/DSLIB-PFE/actions/workflows/npm-publish-github-packages.yml)
+![Coverage](./badges/coverage.svg)
 
 > This repository is used as a component library for the development of our end-of-study application at ECE PARIS. It was developed in Vue3 with Histoire.dev and vite. This facilitates communication between the UX/UI team and the front-end developer.
 

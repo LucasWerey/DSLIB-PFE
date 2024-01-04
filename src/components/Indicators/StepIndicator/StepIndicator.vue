@@ -2,6 +2,7 @@
   <div class="flex flex-row gap-1 flex-shrink-0 w-1/4">
     <div
       v-for="step in stepNumber"
+      :key="step"
       id="step"
       :class="[
         'w-1/2 h-1 rounded-lg',

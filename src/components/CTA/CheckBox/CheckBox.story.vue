@@ -40,7 +40,6 @@ import { colorsPalette } from '../../../tailwind/presetConfig'
 import type { CheckBoxColor, CheckBoxSize, CheckBoxForm, CheckBoxState } from './CheckBox.model'
 import {
   CHECKBOX_FORMS,
-  CHECKBOX_STATES,
   CHECKBOX_SIZES,
   CHECKBOX_COLOR_DEFAULT,
   CHECKBOX_SIZE_DEFAULT,
