@@ -1,6 +1,6 @@
 {
   "name": "@lucaswerey/dslib-pfe",
-  "version": "0.0.46",
+  "version": "0.0.47",
   "private": false,
   "main": "./lib/index.umd.js",
   "module": "./lib/index.mjs",
