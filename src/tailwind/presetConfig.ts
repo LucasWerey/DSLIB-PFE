@@ -7,7 +7,7 @@ export default Object.freeze({
         grey: '#CDCDCD',
         lightgrey: '#ECECEC',
         verylightgrey: '#F6F6F6',
-        white: '#FAFAFA'
+        white: '#FFFFFF'
       },
       primary: {
         DEFAULT: '#000000',
@@ -119,7 +119,7 @@ export const colorsPalette = {
   grey: '#CDCDCD',
   lightgrey: '#ECECEC',
   verylightgrey: 'F6F6F6',
-  white: '#FAFAFA',
+  white: '#FFFFFF',
   primary: '#000000',
   light: '#00F2A5',
   charcoal: '#373F51',

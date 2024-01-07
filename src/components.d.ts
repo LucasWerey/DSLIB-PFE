@@ -18,6 +18,8 @@ declare module 'vue' {
     ControlDescription: typeof import('./../histoire/components/internals/ControlDescription.vue')['default']
     IconsBase: typeof import('./components/Media/IconsBase/IconsBase.vue')['default']
     'IconsBase.story': typeof import('./components/Media/IconsBase/IconsBase.story.vue')['default']
+    InputField: typeof import('./components/CTA/InputField/InputField.vue')['default']
+    'InputField.story': typeof import('./components/CTA/InputField/InputField.story.vue')['default']
     Loader: typeof import('./components/Indicators/Loader/Loader.vue')['default']
     'Loader.story': typeof import('./components/Indicators/Loader/Loader.story.vue')['default']
     SnackBar: typeof import('./components/Indicators/SnackBar/SnackBar.vue')['default']

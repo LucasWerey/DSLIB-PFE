@@ -2,7 +2,7 @@
 import './assets/index.css'
 import SnackBar from './components/Indicators/SnackBar'
 import Avatar from './components/Media/Avatar'
-import VideoPlayer from './components/Media/VideoPlayer'
+import InputField from './components/CTA/InputField'
 
 const isVisible = ref(true)
 
@@ -11,8 +11,8 @@ const consoleLog = (arg: boolean) => {
   return arg
 }
 
-const src = `https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm`
-const src2 = `https://interactive-examples.mdn.mozilla.net/media/eazeaz-videos/fleazezaer.mp4`
+const parentModel = ref('')
+const parentModel2 = ref('')
 </script>
 
 <template>
@@ -41,8 +41,19 @@ const src2 = `https://interactive-examples.mdn.mozilla.net/media/eazeaz-videos/f
   <Avatar type="notConnected" size="xlarge" />
   <Avatar type="initial" size="xlarge">YO</Avatar>
 
-  <div class="flex flex-col gap-2">
-    <VideoPlayer size="md" :src="src2" autoplay />
-    <VideoPlayer size="xs" :src="src" autoplay />
-  </div>
+  <InputField
+    v-model="parentModel"
+    placeholder="Email Address"
+    label="Email"
+    hint="Please enter without mistakes"
+
+  />
+
+  <InputField
+    v-model="parentModel2"
+    placeholder="Email Address"
+    label="Email"
+    hint="Please enter without mistakes"
+    size="big"
+  />
 </template>
