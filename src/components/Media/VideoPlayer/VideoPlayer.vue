@@ -171,7 +171,7 @@ const checkVideoValidity = async () => {
   videoSource.value =
     isSrcValid.value && props.src !== ''
       ? props.src
-      : 'http://media.w3.org/2010/05/sintel/trailer.mp4'
+      : 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm'
 
   if (videoRef.value) {
     ;(videoRef.value as HTMLVideoElement).load()

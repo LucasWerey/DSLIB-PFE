@@ -10,3 +10,4 @@ export { default as Button } from './components/CTA/Button'
 export { default as SnackBar } from './components/Indicators/SnackBar'
 export { default as Avatar } from './components/Media/Avatar'
 export { default as VideoPlayer } from './components/Media/VideoPlayer'
+export { default as  InputField } from './components/CTA/InputField';
