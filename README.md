@@ -3,6 +3,7 @@
 [![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)](https://vuejs.org/)
 [![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vue.js](https://img.shields.io/badge/docker-%2335495e.svg?style=for-the-badge&logo=docker&logoColor=%234FC08D)](https://vuejs.org/)
 
 [![GitHub package.json npm version](https://img.shields.io/github/package-json/v/LucasWerey/DSLIB-PFE?color=58A4B0&label=npm&style=for-the-badge&logo=NPM)](https://github.com/LucasWerey/DSLIB-PFE/pkgs/npm/dslib-pfe)
 ![Coverage](./badges/coverage.svg)
@@ -60,6 +61,17 @@ In your main project import the library :
 
 ```bash
 yarn add @lucaswerey/dslib-pfe@0.0.34
+```
+
+## Use docker
+
+> Follow the instructions to install docker : https://docs.docker.com/engine/install/
+
+In your terminal :
+
+```bash
+docker build -t dslib-pfe .
+docker run -p 6006:6006 dslib-pfe -d
 ```
 
 ![Alt text](image.png)
