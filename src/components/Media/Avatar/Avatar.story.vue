@@ -29,12 +29,12 @@
     </Variant>
     <Variant title="All sizes photo" auto-props-disabled>
       <div class="flex flew-row gap-1 w-full justify-center">
-        <Avatar type="photo" size="xlarge" src="https://picsum.photos/200" alt="avatar photo" />
-        <Avatar type="photo" size="large" src="https://picsum.photos/200" alt="avatar photo" />
-        <Avatar type="photo" size="medium" src="https://picsum.photos/200" alt="avatar photo" />
-        <Avatar type="photo" size="small" src="https://picsum.photos/200" alt="avatar photo" />
-        <Avatar type="photo" size="xsmall" src="https://picsum.photos/200" alt="avatar photo" />
-        <Avatar type="photo" size="xxsmall" src="https://picsum.photos/200" alt="avatar photo" />
+        <Avatar type="photo" size="xlarge" :src="avartarUrl" alt="avatar photo" />
+        <Avatar type="photo" size="large" :src="avartarUrl" alt="avatar photo" />
+        <Avatar type="photo" size="medium" :src="avartarUrl" alt="avatar photo" />
+        <Avatar type="photo" size="small" :src="avartarUrl" alt="avatar photo" />
+        <Avatar type="photo" size="xsmall" :src="avartarUrl" alt="avatar photo" />
+        <Avatar type="photo" size="xxsmall" :src="avartarUrl" alt="avatar photo" />
       </div>
     </Variant>
     <Variant title="All sizes initial" auto-props-disabled>
@@ -68,6 +68,9 @@ import {
   AVATAR_TYPE_DEFAULT,
   AVATAR_SIZE_DEFAULT
 } from './Avatar.model'
+
+const avartarUrl: string =
+  'https://api.dicebear.com/7.x/micah/svg?seed=Lucas&radius=50&mouth=pucker,smile,smirk,laughing&backgroundColor=b6e3f4,ffd5dc,d1d4f9,c0aede,ffdfbf'
 
 interface Props {
   type: AvatarType

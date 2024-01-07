@@ -34,7 +34,7 @@ export default defineConfig({
   test: {
     coverage: {
       provider: 'v8',
-      include: ['src/**/*.{ts,vue}'],
+      include: ['src/**/*.{ts,vue}']
     }
   },
   build: {
@@ -54,6 +54,8 @@ export default defineConfig({
     }
   },
   server: {
+    host: true,
+    strictPort: true,
     port: process.env.HISTOIRE ? 6006 : 3000
   }
 })

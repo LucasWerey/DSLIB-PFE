@@ -1,6 +1,9 @@
 <template>
   <div class="flex items-center justify-center" data-test="Avatar">
-    <div class="flex items-center justify-center rounded-full" :class="[avatarSize, bgColor]">
+    <div
+      class="flex items-center justify-center rounded-full overflow-hidden"
+      :class="[avatarSize, bgColor]"
+    >
       <img
         v-if="isPhotoType && src && alt"
         :src="src"
@@ -11,8 +14,9 @@
       <div v-if="isInitialType" class="text-basic-white" :class="textSize"><slot /></div>
       <img
         v-if="isNotConnectedType"
-        src="../../../assets/images/NotConnected.png"
+        src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
         alt="not connected avatar"
+        class="rounded-full object-fit"
       />
     </div>
   </div>
