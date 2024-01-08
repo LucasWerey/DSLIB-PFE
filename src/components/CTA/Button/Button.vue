@@ -9,9 +9,9 @@
         isFilledAndActive && !isMediaButton,
       'bg-basic-grey text-basic-white cursor-not-allowed border-basic-grey':
         isFilledAndDisabled && !isMediaButton,
-      'bg-basic-white text-primary-moonstone border-primary-moonstone':
+      'bg-transparent text-primary-moonstone border-primary-moonstone':
         isOutlinedAndActive && !isMediaButton,
-      'bg-basic-white text-basic-grey border-basic-grey cursor-not-allowed':
+      'bg-transparent text-basic-grey border-basic-grey cursor-not-allowed':
         isOutlinedAndDisabled && !isMediaButton,
       'bg-inherit text-primary-moonstone gap-2': isOffAndActive && !isMediaButton,
       'bg-inherit text-basic-grey cursor-not-allowed gap-2': isOffAndDisabled && !isMediaButton,
