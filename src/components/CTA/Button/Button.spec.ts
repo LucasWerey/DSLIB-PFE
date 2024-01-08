@@ -82,7 +82,7 @@ describe('Button.vue', () => {
     })
 
     const button = wrapper.find('[data-test="Button"]')
-    expect(button.classes()).toContain('bg-basic-white')
+    expect(button.classes()).toContain('bg-transparent')
     expect(button.classes()).toContain('text-primary-moonstone')
     expect(button.classes()).toContain('border-primary-moonstone')
   })
