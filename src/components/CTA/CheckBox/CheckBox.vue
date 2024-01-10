@@ -39,7 +39,7 @@
     </div>
     <input
       type="checkbox"
-      :checked="isChecked"
+      :checked="!isChecked"
       :disabled="props.disabled"
       @click="toggleChecked"
       :class="{
@@ -100,7 +100,6 @@ const isChecked = ref(props.state === 'unchecked')
 const emit = defineEmits(['update:state'])
 
 const toggleChecked = () => {
-  console.log(!isChecked.value)
   isChecked.value = !isChecked.value
   emit('update:state', isChecked.value)
 }
