@@ -9,9 +9,10 @@
     <div v-if="!isBigSize" class="w-full h-12 relative">
       <div v-if="!hasDateInput" class="w-full h-12 relative">
         <input
+          @blur="emit('blur')"
           data-test="InputText"
           :disabled="isDisabled"
-          type="text"
+          :type="password ? 'password' : 'text'"
           :placeholder="placeholder"
           :value="modelValue"
           @input="handleInput($event as InputEvent)"
@@ -105,6 +106,10 @@ const props = defineProps({
     type: String as PropType<InputFieldState>,
     default: INPUTFIELD_STATE_DEFAULT,
     validator: (value: InputFieldState): boolean => INPUTFIELD_STATES.includes(value)
+  },
+  password: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -116,6 +121,7 @@ const hasIcon = computed(() => props.hasIcon)
 const isDateInput = computed(() => props.isDateInput)
 const state = computed(() => props.state)
 const size = computed(() => props.size)
+const password = computed(() => props.password)
 
 const isDisabled = computed(() => state.value === INPUTFIELD_STATE.disabled)
 const hasError = computed(() => state.value === INPUTFIELD_STATE.error)
@@ -123,7 +129,7 @@ const hasErrorIcon = computed(() => hasError.value && hasIcon.value && !isBigSiz
 const hasDateInput = computed(() => isDateInput.value && !isBigSize.value)
 const isBigSize = computed(() => size.value === INPUTFIELD_SIZE.big)
 
-const emit = defineEmits(['update:modelValue'])
+const emit = defineEmits(['update:modelValue', 'blur'])
 
 const handleInput = (event: InputEvent) => {
   emit('update:modelValue', (event.target as HTMLInputElement)?.value)

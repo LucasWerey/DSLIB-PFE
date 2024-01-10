@@ -20,6 +20,9 @@
         <HstCheckbox v-model="controls.isDateInput" title="isDate" />
       </ControlDescription>
       <ControlDescription>
+        <HstCheckbox v-model="controls.password" title="password" />
+      </ControlDescription>
+      <ControlDescription>
         <HstSelect
           v-model="controls.size"
           :options="Object.values(INPUTFIELD_SIZES)"
@@ -44,6 +47,8 @@
         :isDateInput="controls.isDateInput"
         :size="controls.size"
         :state="controls.state"
+        :password="controls.password"
+        @blur="() => console.log('blur')"
       />
     </Variant>
     <Variant title="Date Input" auto-props-disabled>
@@ -123,6 +128,7 @@ interface Props {
   isDateInput: boolean
   size: InputFieldSize
   state: InputFieldState
+  password: boolean
 }
 
 const controls = reactive<Props>({
@@ -133,6 +139,7 @@ const controls = reactive<Props>({
   hasIcon: false,
   isDateInput: false,
   size: INPUTFIELD_SIZE_DEFAULT,
-  state: INPUTFIELD_STATE_DEFAULT
+  state: INPUTFIELD_STATE_DEFAULT,
+  password: false
 })
 </script>
