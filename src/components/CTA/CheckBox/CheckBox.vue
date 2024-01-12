@@ -1,6 +1,6 @@
 <template>
   <label
-    class="flex align-middle justify-center w-full"
+    class="flex align-middle justify-center w-fit"
     :class="{
       'cursor-not-allowed': props.disabled,
       'cursor-pointer': !props.disabled
