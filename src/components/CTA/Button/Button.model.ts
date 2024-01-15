@@ -36,6 +36,7 @@ export const BUTTON_ICON = {
   linkedin: 'linkedin',
   google: 'google',
   moveRight: 'moveRight',
+  moveLeft: 'moveLeft',
   none: 'none'
 } as const
 

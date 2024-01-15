@@ -21,7 +21,7 @@
     }"
   >
     <IconsBase v-if="isMediaButton && iconName" :name="iconName" />
-    <IconsBase v-if="!isMediaButton && hasIcon" name="moveRight" :color="iconColor" />
+    <IconsBase v-if="!isMediaButton && hasIcon && iconName" :name="iconName" :color="iconColor" />
     <slot />
   </button>
 </template>
