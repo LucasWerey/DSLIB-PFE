@@ -15,6 +15,8 @@ declare module 'vue' {
     'Button.story': typeof import('./components/CTA/Button/Button.story.vue')['default']
     CheckBox: typeof import('./components/CTA/CheckBox/CheckBox.vue')['default']
     'CheckBox.story': typeof import('./components/CTA/CheckBox/CheckBox.story.vue')['default']
+    ChipContainer: typeof import('./components/Containment/ChipContainer/ChipContainer.vue')['default']
+    'ChipContainer.story': typeof import('./components/Containment/ChipContainer/ChipContainer.story.vue')['default']
     ControlDescription: typeof import('./../histoire/components/internals/ControlDescription.vue')['default']
     IconsBase: typeof import('./components/Media/IconsBase/IconsBase.vue')['default']
     'IconsBase.story': typeof import('./components/Media/IconsBase/IconsBase.story.vue')['default']

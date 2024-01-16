@@ -36,6 +36,10 @@ export default defineConfig({
       {
         title: 'CTA',
         id: 'cta'
+      },
+      {
+        title: 'Containment',
+        id: 'containment'
       }
     ]
   }
