@@ -24,6 +24,8 @@ declare module 'vue' {
     'InputField.story': typeof import('./components/CTA/InputField/InputField.story.vue')['default']
     Loader: typeof import('./components/Indicators/Loader/Loader.vue')['default']
     'Loader.story': typeof import('./components/Indicators/Loader/Loader.story.vue')['default']
+    SelectField: typeof import('./components/CTA/SelectField/SelectField.vue')['default']
+    'SelectField.story': typeof import('./components/CTA/SelectField/SelectField.story.vue')['default']
     SnackBar: typeof import('./components/Indicators/SnackBar/SnackBar.vue')['default']
     'SnackBar.story': typeof import('./components/Indicators/SnackBar/SnackBar.story.vue')['default']
     StepIndicator: typeof import('./components/Indicators/StepIndicator/StepIndicator.vue')['default']
