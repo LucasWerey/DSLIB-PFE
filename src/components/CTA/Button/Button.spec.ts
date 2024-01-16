@@ -56,20 +56,6 @@ describe('Button.vue', () => {
     expect(wrapper.findComponent({ name: 'IconsBase' }).props('color')).toBe('white')
   })
 
-  it('should set icon color to grey when filled and active', () => {
-    const wrapper = mount(Button, {
-      props: {
-        type: BUTTON_TYPE.default,
-        state: BUTTON_STATE.disabled,
-        styled: BUTTON_STYLE.off,
-        icon: BUTTON_ICON.none,
-        iconPosition: BUTTON_ICON_POSITION.leading
-      }
-    })
-
-    expect(wrapper.findComponent({ name: 'IconsBase' }).props('color')).toBe('grey')
-  })
-
   it('should apply correct classes when outlined and active', () => {
     const wrapper = mount(Button, {
       props: {

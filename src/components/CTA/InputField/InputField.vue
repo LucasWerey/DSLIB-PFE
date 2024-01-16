@@ -12,7 +12,7 @@
           @blur="emit('blur')"
           data-test="InputText"
           :disabled="isDisabled"
-          :type="password ? 'password' : 'text'"
+          :type="inputType"
           :placeholder="placeholder"
           :value="modelValue"
           @input="handleInput($event as InputEvent)"
@@ -23,6 +23,7 @@
             'bg-basic-verylightgrey text-basic-darkgrey': isDisabled,
             'bg-basic-white text-primary-moonstone': !isDisabled
           }"
+          :autocomplete="isAutoComplete ? 'new-password' : 'off'"
         />
         <span v-if="hasErrorIcon" class="absolute right-4 top-1/2 transform -translate-y-1/2">
           <IconsBase data-test="IconInput" name="warning" color="error" />
@@ -110,6 +111,13 @@ const props = defineProps({
   password: {
     type: Boolean,
     default: false
+  },
+  inputType: {
+    type: String,
+    default: 'text',
+    validator: function (value) {
+      return ['text', 'password', 'number', 'email'].includes(value as string)
+    }
   }
 })
 
@@ -121,7 +129,8 @@ const hasIcon = computed(() => props.hasIcon)
 const isDateInput = computed(() => props.isDateInput)
 const state = computed(() => props.state)
 const size = computed(() => props.size)
-const password = computed(() => props.password)
+const inputType = computed(() => props.inputType)
+const isAutoComplete = computed(() => inputType.value === 'password')
 
 const isDisabled = computed(() => state.value === INPUTFIELD_STATE.disabled)
 const hasError = computed(() => state.value === INPUTFIELD_STATE.error)
