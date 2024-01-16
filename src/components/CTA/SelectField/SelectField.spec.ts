@@ -35,4 +35,26 @@ describe('SelectField.vue', () => {
     expect(wrapper.emitted()).toHaveProperty('update:modelValue')
     expect(wrapper.emitted()['update:modelValue'][0]).toEqual(['option1'])
   })
+
+  it('renders options correctly', async () => {
+    const wrapper = mount(SelectField, {
+      props: {
+        title: 'Test Title',
+        options: [
+          { label: 'Option 1', value: 'option1' },
+          { label: 'Option 2', value: 'option2' },
+          { label: 'Option 3', value: 'option3' }
+        ],
+        default: 'option1'
+      }
+    })
+
+    await nextTick()
+
+    const options = wrapper.findAll('.items div')
+    expect(options.length).toBe(3)
+    expect(options[0].text()).toBe('Option 1')
+    expect(options[1].text()).toBe('Option 2')
+    expect(options[2].text()).toBe('Option 3')
+  })
 })
