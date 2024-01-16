@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import { SelectFieldOption } from './SelectField.model'
+import type { SelectFieldOption } from './SelectField.model'
 import { logEvent } from 'histoire/client'
 
 interface Controls {

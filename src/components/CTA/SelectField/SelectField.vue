@@ -43,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import { SelectFieldOption } from './SelectField.model'
+import type { SelectFieldOption } from './SelectField.model'
 
 const props = defineProps({
   options: {
