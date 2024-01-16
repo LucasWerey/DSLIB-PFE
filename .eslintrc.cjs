@@ -22,7 +22,8 @@ module.exports = {
     'lib',
     'coverage',
     'badges',
-    'src/assets/**/*'
+    'src/assets/**/*',
+    './node_modules/strip-ansi/**/*'
   ],
   rules: {
     'vue/multi-word-component-names': 'off',
