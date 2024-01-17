@@ -13,3 +13,4 @@ export { default as VideoPlayer } from './components/Media/VideoPlayer'
 export { default as  InputField } from './components/CTA/InputField';
 export { default as  chipContainer } from './components/Containment/ChipContainer';
 export { default as  ChipContainer } from './components/Containment/ChipContainer';
+export { default as  CertifContainer } from './components/Containment/CertifContainer';

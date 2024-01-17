@@ -13,6 +13,8 @@ declare module 'vue' {
     'BulletPoints.story': typeof import('./components/Indicators/BulletPoints/BulletPoints.story.vue')['default']
     Button: typeof import('./components/CTA/Button/Button.vue')['default']
     'Button.story': typeof import('./components/CTA/Button/Button.story.vue')['default']
+    CertifContainer: typeof import('./components/Containment/CertifContainer/CertifContainer.vue')['default']
+    'CertifContainer.story': typeof import('./components/Containment/CertifContainer/CertifContainer.story.vue')['default']
     CheckBox: typeof import('./components/CTA/CheckBox/CheckBox.vue')['default']
     'CheckBox.story': typeof import('./components/CTA/CheckBox/CheckBox.story.vue')['default']
     ChipContainer: typeof import('./components/Containment/ChipContainer/ChipContainer.vue')['default']
