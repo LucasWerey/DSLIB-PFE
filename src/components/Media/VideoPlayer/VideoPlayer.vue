@@ -13,7 +13,7 @@
       :loop="autoplay"
       :autoplay="autoplay"
       :muted="autoplay"
-      class="flex items-center justify-center video-element object-cover"
+      class="video-element flex items-center justify-center object-cover"
       @pause="showPlayButton"
       @timeupdate.stop="updateProgress"
       :class="videoSizeClass"
@@ -24,7 +24,7 @@
     <div
       data-test="playButton"
       v-if="!isPlaying && !autoplay"
-      class="cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer"
       :class="buttonSizeClass"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
@@ -35,7 +35,7 @@
     <div
       data-test="pauseButton"
       v-if="isPlaying && showPauseButton && !autoplay"
-      class="cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer"
       :class="buttonSizeClass"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
@@ -47,16 +47,16 @@
       data-test="controls"
       v-if="showControls && !autoplay"
       id="controls"
-      class="w-full absolute top-full transform -translate-y-[100%] gap-10 px-4 flex flex-row-reverse justify-between"
+      class="absolute top-full flex w-full -translate-y-[100%] transform flex-row-reverse justify-between gap-10 px-4"
     >
       <div
         id="volume"
         data-test="volumeButton"
-        class="flex flex-row gap-2 py-4 cursor-pointer w-10 h-50"
+        class="h-50 flex w-10 cursor-pointer flex-row gap-2 py-4"
         @click.stop="showVolumeSlider = !showVolumeSlider"
       >
-        <div class="flex flex-col-reverse gap-2 align-middle justify-center items-center w-10 h-50">
-          <div class="w-8 h-8">
+        <div class="h-50 flex w-10 flex-col-reverse items-center justify-center gap-2 align-middle">
+          <div class="h-8 w-8">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -65,7 +65,7 @@
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="cursor-pointer w-8"
+              class="w-8 cursor-pointer"
             >
               <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
               <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15 9a5 5 0 0 1 0 6"></path>
@@ -76,7 +76,7 @@
             data-test="volumeSlider"
             type="range"
             class="volume-slider cursor-pointer"
-            :class="size === 'xs' ? 'w-20 origin-bottom-center' : ''"
+            :class="size === 'xs' ? 'origin-bottom-center w-20' : ''"
             min="0"
             max="1"
             step="0.1"
@@ -86,7 +86,7 @@
           />
         </div>
       </div>
-      <div class="flex items-middle w-full h-full self-end mb-1" id="timer">
+      <div class="items-middle mb-1 flex h-full w-full self-end" id="timer">
         <input
           data-test="progressSlider"
           type="range"
@@ -151,7 +151,7 @@ const autoplay = computed(() => props.autoplay)
 const setSizeClasses = {
   xs: 'w-[310px] h-[196.93px]',
   sm: 'w-[620px] h-[393.85px]',
-  md: 'w-[732px] h-[465px]'
+  md: 'w-[936px] h-[594.59px]'
 }
 
 const setButtonSizeClasses = {
@@ -193,11 +193,11 @@ const playVideo = () => {
       if (playPromise !== undefined) {
         playPromise
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          .then((_) => {
+          .then(_ => {
             isPlaying.value = true
             togglePauseButton()
           })
-          .catch((error) => {
+          .catch(error => {
             console.error('Play interrupted:', error)
           })
       }
