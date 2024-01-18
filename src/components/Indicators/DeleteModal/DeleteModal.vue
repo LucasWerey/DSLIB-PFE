@@ -3,8 +3,11 @@
     class="flex min-h-44 w-[300px] flex-col items-center gap-8 overflow-hidden rounded-3xl bg-basic-white p-6 shadow sm:w-[400px]"
   >
     <div class="flex w-full flex-col items-center gap-4">
-      <div class="text-center font-inter text-8">{{ title }}</div>
-      <div v-show="description" class="text-center font-eina1 text-3 font-normal">
+      <div class="text-center font-inter text-8 text-basic-black">{{ title }}</div>
+      <div
+        v-show="description"
+        class="text-center font-eina1 text-3 font-normal text-basic-darkgrey"
+      >
         {{ description }}
       </div>
     </div>
