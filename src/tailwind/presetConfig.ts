@@ -14,6 +14,7 @@ export default Object.freeze({
         light: '#00F2A5',
         charcoal: '#373F51',
         moonstone: '#58A4B0',
+        lightmoonstone: '#58A4B0',
         powder: '#A9BCD0',
         platinum: '#D8DBE2'
       },

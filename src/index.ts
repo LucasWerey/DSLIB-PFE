@@ -15,3 +15,4 @@ export { default as  chipContainer } from './components/Containment/ChipContaine
 export { default as  ChipContainer } from './components/Containment/ChipContainer';
 export { default as  CertifContainer } from './components/Containment/CertifContainer';
 export { default as  DeleteModal } from './components/Indicators/DeleteModal';
+export { default as  RankingContainer } from './components/Containment/RankingContainer';
