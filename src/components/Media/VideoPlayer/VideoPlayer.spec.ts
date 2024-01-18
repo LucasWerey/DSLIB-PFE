@@ -27,7 +27,7 @@ describe('VideoPlayer.vue', () => {
 
     const videoElement = wrapper.find('video')
     expect(videoElement.attributes('class')).toContain(
-      'flex items-center justify-center video-element object-cover w-[620px] h-[393.85px]'
+      'flex items-center justify-center video-element object-cover w-[936px] h-[594.59px]'
     )
   })
 
