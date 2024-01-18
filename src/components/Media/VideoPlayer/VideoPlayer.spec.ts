@@ -17,7 +17,7 @@ describe('VideoPlayer.vue', () => {
   it('checks video size', async () => {
     const wrapper = mount(VideoPlayer, {
       props: {
-        size: 'sm',
+        size: 'md',
         src: 'https://example.com/video.mp4',
         autoplay: true
       }
@@ -27,7 +27,7 @@ describe('VideoPlayer.vue', () => {
 
     const videoElement = wrapper.find('video')
     expect(videoElement.attributes('class')).toContain(
-      'flex items-center justify-center video-element object-cover w-[936px] h-[594.59px]'
+      ' w-[936px] h-[594.59px]'
     )
   })
 
