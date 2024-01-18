@@ -9,7 +9,7 @@
     <div
       v-if="hasIcon"
       class="flex h-[18px] w-[18px] cursor-pointer items-center overflow-y-hidden"
-      :click="emit('deleteChip')"
+      @click="emit('deleteChip')"
     >
       <IconsBase name="close" class="h-full w-full" />
     </div>
