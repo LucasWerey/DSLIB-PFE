@@ -37,7 +37,7 @@
           :placeholder="placeholder"
           :value="modelValue"
           @input="handleInput($event as InputEvent)"
-          class="h-full w-full resize-none items-start rounded-md border-2 border-basic-grey px-4 py-2.5 align-middle text-primary-moonstone focus:border-primary-charcoal"
+          class="bold-placeholder h-full w-full resize-none items-start rounded-md border-2 border-basic-grey px-4 py-2.5 align-middle text-primary-moonstone focus:border-primary-charcoal"
           :class="{
             'bg-basic-verylightgrey text-basic-darkgrey': isDisabled,
             'bg-basic-white text-primary-moonstone ': !isDisabled
