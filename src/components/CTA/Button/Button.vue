@@ -6,17 +6,20 @@
       'h-12 w-[375px] items-center justify-center gap-4 rounded  border-2':
         !isOffAndActive && !isOffAndDisabled,
       'border-primary-moonstone bg-primary-moonstone text-basic-white':
-        isFilledAndActive && !isMediaButton,
+        isFilledAndActive && !isMediaButton && !isLight,
+      'border-0 bg-primary-lightmoonstone text-primary-moonstone':
+        isFilledAndActive && !isMediaButton && isLight,
       'cursor-not-allowed border-basic-grey bg-basic-grey text-basic-white':
-        isFilledAndDisabled && !isMediaButton,
+        isFilledAndDisabled && !isMediaButton && !isLight,
       'border-primary-moonstone bg-transparent text-primary-moonstone':
-        isOutlinedAndActive && !isMediaButton,
+        isOutlinedAndActive && !isMediaButton && !isLight,
       'cursor-not-allowed border-basic-grey bg-transparent text-basic-grey':
-        isOutlinedAndDisabled && !isMediaButton,
+        isOutlinedAndDisabled && !isMediaButton && !isLight,
       'gap-2 bg-inherit text-primary-moonstone': isOffAndActive && !isMediaButton,
-      'cursor-not-allowed gap-2 bg-inherit text-basic-grey': isOffAndDisabled && !isMediaButton,
+      'cursor-not-allowed gap-2 bg-inherit text-basic-grey':
+        isOffAndDisabled && !isMediaButton && !isLight,
       'border-basic-grey bg-inherit font-normal normal-case text-basic-black':
-        icon && isMediaButton,
+        icon && isMediaButton && !isLight,
       'flex-row-reverse': isIconTrailing
     }"
   >
@@ -74,6 +77,11 @@ const props = defineProps({
     type: String as PropType<ButtonIconPosition>,
     required: false,
     validator: (value: ButtonIconPosition): boolean => BUTTON_ICON_POSITIONS.includes(value)
+  },
+  isLight: {
+    type: Boolean,
+    required: false,
+    default: false
   }
 })
 
@@ -84,6 +92,8 @@ const type = computed(() => props.type)
 const state = computed(() => props.state)
 
 const icon = computed(() => props.icon)
+
+const isLight = computed(() => props.isLight)
 
 const iconPosition = computed(() => props.iconPosition)
 

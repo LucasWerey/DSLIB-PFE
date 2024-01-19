@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border-primary-moonston bg-primary-lightmoonstone flex h-[22px] min-w-fit max-w-[95px] items-center justify-between gap-2 overflow-hidden rounded-lg border-[0.25px] bg-opacity-10 px-2 py-1 text-2 font-normal leading-5 text-primary-moonstone"
+    class="border-primary-moonston flex h-[22px] min-w-fit max-w-[95px] items-center justify-between gap-2 overflow-hidden rounded-lg border-[0.25px] bg-primary-lightmoonstone px-2 py-1 text-2 font-normal leading-5 text-primary-moonstone"
     :class="setIconPosition"
   >
     <div class="flex overflow-hidden overflow-ellipsis whitespace-nowrap">
