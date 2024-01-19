@@ -4,7 +4,7 @@
       class="h-4 pl-1 text-2 font-bold uppercase tracking-tight text-basic-black"
       data-test="Label"
     >
-      {{ label }}
+      {{ label + (isRequired ? ' ' : '') }}<span class="text-error" v-if="isRequired">*</span>
     </p>
     <div v-if="!isBigSize" class="relative h-12 w-full">
       <div v-if="!hasDateInput" class="relative h-12 w-full">
@@ -118,6 +118,10 @@ const props = defineProps({
     validator: function (value) {
       return ['text', 'password', 'number', 'email'].includes(value as string)
     }
+  },
+  isRequired: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -137,6 +141,7 @@ const hasError = computed(() => state.value === INPUTFIELD_STATE.error)
 const hasErrorIcon = computed(() => hasError.value && hasIcon.value && !isBigSize.value)
 const hasDateInput = computed(() => isDateInput.value && !isBigSize.value)
 const isBigSize = computed(() => size.value === INPUTFIELD_SIZE.big)
+const isRequired = computed(() => props.isRequired)
 
 const emit = defineEmits(['update:modelValue', 'blur'])
 

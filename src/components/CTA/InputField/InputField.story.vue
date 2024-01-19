@@ -40,6 +40,9 @@
           title="State"
         />
       </ControlDescription>
+      <ControlDescription>
+        <HstCheckbox v-model="controls.isRequired" title="isRequired" />
+      </ControlDescription>
     </template>
     <Variant title="Playground" auto-props-disabled>
       <InputField
@@ -52,6 +55,7 @@
         :size="controls.size"
         :state="controls.state"
         :inputType="controls.inputType"
+        :isRequired="controls.isRequired"
         @blur="() => console.log('blur')"
       />
     </Variant>
@@ -133,6 +137,7 @@ interface Props {
   size: InputFieldSize
   state: InputFieldState
   inputType: string
+  isRequired: boolean
 }
 
 const controls = reactive<Props>({
@@ -144,6 +149,7 @@ const controls = reactive<Props>({
   isDateInput: false,
   size: INPUTFIELD_SIZE_DEFAULT,
   state: INPUTFIELD_STATE_DEFAULT,
-  inputType: 'text'
+  inputType: 'text',
+  isRequired: false
 })
 </script>

@@ -28,6 +28,9 @@
           title="Icon Position"
         />
       </ControlDescription>
+      <ControlDescription>
+        <HstCheckbox v-model="controls.isLight" title="isLight" />
+      </ControlDescription>
     </template>
     <Variant title="Playground" auto-props-disabled>
       <Button
@@ -36,6 +39,7 @@
         :state="controls.state"
         :iconPosition="controls.iconPosition"
         :styled="controls.style"
+        :isLight="controls.isLight"
         >Hello</Button
       >
     </Variant>
@@ -148,6 +152,7 @@ interface Props {
   state: ButtonState
   iconPosition: ButtonIconPosition
   style: ButtonStyle
+  isLight: boolean
 }
 
 const controls = reactive<Props>({
@@ -155,6 +160,7 @@ const controls = reactive<Props>({
   icon: 'none',
   state: BUTTON_STATE_DEFAULT,
   iconPosition: 'none',
-  style: BUTTON_STYLE_DEFAULT
+  style: BUTTON_STYLE_DEFAULT,
+  isLight: false
 })
 </script>
