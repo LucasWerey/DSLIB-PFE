@@ -10,9 +10,10 @@ export { default as Button } from './components/CTA/Button'
 export { default as SnackBar } from './components/Indicators/SnackBar'
 export { default as Avatar } from './components/Media/Avatar'
 export { default as VideoPlayer } from './components/Media/VideoPlayer'
-export { default as  InputField } from './components/CTA/InputField';
-export { default as  chipContainer } from './components/Containment/ChipContainer';
-export { default as  ChipContainer } from './components/Containment/ChipContainer';
-export { default as  CertifContainer } from './components/Containment/CertifContainer';
-export { default as  DeleteModal } from './components/Indicators/DeleteModal';
-export { default as  RankingContainer } from './components/Containment/RankingContainer';
+export { default as InputField } from './components/CTA/InputField'
+export { default as chipContainer } from './components/Containment/ChipContainer'
+export { default as ChipContainer } from './components/Containment/ChipContainer'
+export { default as CertifContainer } from './components/Containment/CertifContainer'
+export { default as DeleteModal } from './components/Indicators/DeleteModal'
+export { default as RankingContainer } from './components/Containment/RankingContainer'
+export { default as SelectField } from './components/CTA/SelectField'
