@@ -18,7 +18,7 @@
           color="darkgrey"
         />
       </div>
-      <div class="items" v-show="open">
+      <div class="items absolute z-10 w-full" v-show="open">
         <div
           v-for="(option, i) of options"
           :key="i"
