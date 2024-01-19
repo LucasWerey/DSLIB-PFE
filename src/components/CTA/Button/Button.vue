@@ -1,21 +1,21 @@
 <template>
   <button
     data-test="Button"
-    class="inline-flex text-3 font-bold uppercase tracking-[0.42px] px-4 py-2 items-center"
+    class="inline-flex items-center px-4 py-2 text-3 font-bold tracking-[0.42px]"
     :class="{
-      'w-[375px] h-12 rounded justify-center items-center gap-4  border-2':
+      'h-12 w-[375px] items-center justify-center gap-4 rounded  border-2':
         !isOffAndActive && !isOffAndDisabled,
-      'bg-primary-moonstone text-basic-white border-primary-moonstone':
+      'border-primary-moonstone bg-primary-moonstone text-basic-white':
         isFilledAndActive && !isMediaButton,
-      'bg-basic-grey text-basic-white cursor-not-allowed border-basic-grey':
+      'cursor-not-allowed border-basic-grey bg-basic-grey text-basic-white':
         isFilledAndDisabled && !isMediaButton,
-      'bg-transparent text-primary-moonstone border-primary-moonstone':
+      'border-primary-moonstone bg-transparent text-primary-moonstone':
         isOutlinedAndActive && !isMediaButton,
-      'bg-transparent text-basic-grey border-basic-grey cursor-not-allowed':
+      'cursor-not-allowed border-basic-grey bg-transparent text-basic-grey':
         isOutlinedAndDisabled && !isMediaButton,
-      'bg-inherit text-primary-moonstone gap-2': isOffAndActive && !isMediaButton,
-      'bg-inherit text-basic-grey cursor-not-allowed gap-2': isOffAndDisabled && !isMediaButton,
-      'bg-inherit text-basic-black border-basic-grey normal-case font-normal':
+      'gap-2 bg-inherit text-primary-moonstone': isOffAndActive && !isMediaButton,
+      'cursor-not-allowed gap-2 bg-inherit text-basic-grey': isOffAndDisabled && !isMediaButton,
+      'border-basic-grey bg-inherit font-normal normal-case text-basic-black':
         icon && isMediaButton,
       'flex-row-reverse': isIconTrailing
     }"

@@ -1,13 +1,13 @@
 <template>
-  <div class="flex flex-col w-[375px] items-start gap-2" data-test="InputField">
+  <div class="flex w-[375px] flex-col items-start gap-2" data-test="InputField">
     <p
-      class="text-basic-black text-2 font-bold uppercase tracking-tight h-4 pl-1"
+      class="h-4 pl-1 text-2 font-bold uppercase tracking-tight text-basic-black"
       data-test="Label"
     >
       {{ label }}
     </p>
-    <div v-if="!isBigSize" class="w-full h-12 relative">
-      <div v-if="!hasDateInput" class="w-full h-12 relative">
+    <div v-if="!isBigSize" class="relative h-12 w-full">
+      <div v-if="!hasDateInput" class="relative h-12 w-full">
         <input
           @blur="emit('blur')"
           data-test="InputText"
@@ -16,7 +16,7 @@
           :placeholder="placeholder"
           :value="modelValue"
           @input="handleInput($event as InputEvent)"
-          class="items-start rounded-md border-2 px-4 py-3 align-middle focus:border-primary-charcoal resize-none w-full h-full"
+          class="bold-placeholder h-full w-full resize-none items-start rounded-md border-2 px-4 py-3 align-middle focus:border-primary-charcoal"
           :class="{
             'border-error': hasError,
             'border-basic-grey': !hasError,
@@ -25,7 +25,7 @@
           }"
           :autocomplete="isAutoComplete ? 'new-password' : 'off'"
         />
-        <span v-if="hasErrorIcon" class="absolute right-4 top-1/2 transform -translate-y-1/2">
+        <span v-if="hasErrorIcon" class="absolute right-4 top-1/2 -translate-y-1/2 transform">
           <IconsBase data-test="IconInput" name="warning" color="error" />
         </span>
       </div>
@@ -37,7 +37,7 @@
           :placeholder="placeholder"
           :value="modelValue"
           @input="handleInput($event as InputEvent)"
-          class="text-primary-moonstone items-start rounded-md border-2 px-4 py-2.5 align-middle border-basic-grey focus:border-primary-charcoal resize-none w-full h-full"
+          class="h-full w-full resize-none items-start rounded-md border-2 border-basic-grey px-4 py-2.5 align-middle text-primary-moonstone focus:border-primary-charcoal"
           :class="{
             'bg-basic-verylightgrey text-basic-darkgrey': isDisabled,
             'bg-basic-white text-primary-moonstone ': !isDisabled
@@ -52,10 +52,10 @@
       :placeholder="placeholder"
       :value="modelValue"
       @input="handleInput($event as InputEvent)"
-      class="text-primary-moonstone items-start rounded-md border-2 px-4 py-3 focus:border-primary-charcoal resize-none bg-basic-white w-full h-24"
+      class="h-24 w-full resize-none items-start rounded-md border-2 bg-basic-white px-4 py-3 text-primary-moonstone focus:border-primary-charcoal"
       :class="hasError ? 'border-error' : 'border-basic-grey'"
     />
-    <p v-if="hasError" data-test="Hint" class="text-error pl-1 leading-tight text-3 font-normal">
+    <p v-if="hasError" data-test="Hint" class="pl-1 text-3 font-normal leading-tight text-error">
       {{ hint }}
     </p>
   </div>
@@ -144,3 +144,10 @@ const handleInput = (event: InputEvent) => {
   emit('update:modelValue', (event.target as HTMLInputElement)?.value)
 }
 </script>
+
+<style scoped>
+.bold-placeholder::placeholder {
+  font-weight: 400;
+  font-family: Eina1;
+}
+</style>
