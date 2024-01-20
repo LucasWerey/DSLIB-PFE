@@ -95,4 +95,25 @@ describe('RankingContainer', () => {
     })
     await scrollContainer.trigger('mouseup')
   })
+  it('emits the correct events', async () => {
+    const wrapper = mount(RankingContainer, {
+      props: {
+        title: 'Test Title',
+        labels: [],
+        topRank: false,
+        isDraggable: true
+      }
+    })
+
+    const containerElement = wrapper.find('[data-test="container"]')
+
+    await containerElement.trigger('dragstart')
+    expect(wrapper.emitted()).toHaveProperty('dragstart')
+
+    await containerElement.trigger('dragover')
+    expect(wrapper.emitted()).toHaveProperty('dragover')
+
+    await containerElement.trigger('drop')
+    expect(wrapper.emitted()).toHaveProperty('drop')
+  })
 })

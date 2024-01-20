@@ -29,9 +29,6 @@
         :topRank="controls.topRank"
         :draggable="controls.draggable"
         :is-draggable="controls.draggable"
-        @dragstart="event => console.log('dragstart', event)"
-        @dragover="event => console.log('dragover', event)"
-        @drop="event => console.log('drop', event)"
       />
     </Variant>
     <Variant title="MultipleContainers" auto-props-disabled>
@@ -44,9 +41,9 @@
           :topRank="container.topRank"
           draggable="true"
           isDraggable
-          @dragstart="event => handleDragStart(event, index)"
+          @dragstart="(event: DragEvent) => handleDragStart(event, index)"
           @dragover="handleDragOver"
-          @drop="event => handleDrop(event, index)"
+          @drop="(event: DragEvent) => handleDrop(event, index)"
         />
       </div>
     </Variant>
