@@ -9,7 +9,7 @@
   >
     <template #controls>
       <ControlDescription>
-        <HstInput v-model="controls.title" title="Title" />
+        <HstText v-model="controls.title" title="Title" />
       </ControlDescription>
       <ControlDescription>
         <HstSelect v-model="controls.labels" :options="labelOptions" title="Labels" multiple />
@@ -28,7 +28,27 @@
         :labels="controls.labels"
         :topRank="controls.topRank"
         :draggable="controls.draggable"
+        :is-draggable="controls.draggable"
+        @dragstart="event => console.log('dragstart', event)"
+        @dragover="event => console.log('dragover', event)"
+        @drop="event => console.log('drop', event)"
       />
+    </Variant>
+    <Variant title="MultipleContainers" auto-props-disabled>
+      <div class="space-y-4">
+        <RankingContainer
+          v-for="(container, index) in controls2.values()"
+          :key="index"
+          :title="container.title"
+          :labels="container.labels"
+          :topRank="container.topRank"
+          draggable="true"
+          isDraggable
+          @dragstart="event => handleDragStart(event, index)"
+          @dragover="handleDragOver"
+          @drop="event => handleDrop(event, index)"
+        />
+      </div>
     </Variant>
   </Story>
 </template>
@@ -48,5 +68,45 @@ const controls = reactive<Controls>({
   draggable: false
 })
 
+const controls2 = ref([
+  { title: 'Container 1', labels: ['Label 1'], topRank: false, draggable: true },
+  { title: 'Container 2', labels: ['Label 2'], topRank: false, draggable: true },
+  { title: 'Container 3', labels: ['Label 3'], topRank: false, draggable: true }
+])
+
 const labelOptions = ['this is for testing the scroll container']
+
+let draggedItem: Ref<number | null> = ref(null)
+
+const handleDragStart = async (event: any, index: number) => {
+  event.stopPropagation()
+  await new Promise(resolve => setTimeout(resolve, 0))
+  draggedItem.value = index
+  console.log(`Drag started from position: ${index}`)
+}
+
+const handleDragOver = (event: any) => {
+  event.preventDefault()
+  event.stopPropagation()
+}
+
+const handleDrop = (event: any, index: number) => {
+  event.stopPropagation()
+  if (draggedItem.value !== null) {
+    const controlsCopy = [...controls2.value]
+    const draggedContainer = controlsCopy[draggedItem.value]
+    controlsCopy.splice(draggedItem.value, 1)
+    controlsCopy.splice(index, 0, draggedContainer)
+    controlsCopy[0].topRank = index === 0
+    for (let i = 1; i < controlsCopy.length; i++) {
+      controlsCopy[i].topRank = false
+    }
+    controls2.value = controlsCopy
+    console.log(`Dropped at position: ${index}`)
+    console.log(
+      'New order of items:',
+      controls2.value.map((item, index) => `Position ${index}: ${item.title}`)
+    )
+  }
+}
 </script>

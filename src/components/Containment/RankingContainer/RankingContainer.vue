@@ -4,6 +4,9 @@
       class="flex h-full w-full shrink-0 flex-row items-center gap-3 rounded-[4px] border border-basic-grey bg-basic-white"
       :class="topRankClassBorder"
       data-test="container"
+      @dragstart="$emit('dragstart', $event)"
+      @dragover="$emit('dragover', $event)"
+      @drop="$emit('drop', $event)"
     >
       <div
         class="flex h-full w-fit select-none items-center justify-center border-r border-basic-grey px-3 align-middle text-basic-grey"
@@ -51,7 +54,7 @@ const props = defineProps({
     type: Boolean as PropType<boolean>,
     default: false
   },
-  draggable: {
+  isDraggable: {
     type: Boolean as PropType<boolean>,
     default: false
   }
@@ -60,7 +63,7 @@ const props = defineProps({
 const title = computed(() => props.title)
 const labels = computed(() => props.labels)
 const topRank = computed(() => props.topRank)
-const draggable = computed(() => props.draggable)
+const draggable = computed(() => props.isDraggable)
 
 let isDragging = false
 let startX: number, scrollLeft: number
