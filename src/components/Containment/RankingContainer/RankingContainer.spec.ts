@@ -9,7 +9,7 @@ describe('RankingContainer', () => {
         title: 'Test Title',
         labels: [],
         topRank: false,
-        draggable: false
+        isDraggable: false
       }
     })
 
@@ -23,7 +23,7 @@ describe('RankingContainer', () => {
         title: 'Test Title',
         labels: ['Label 1', 'Label 2'],
         topRank: false,
-        draggable: false
+        isDraggable: false
       }
     })
 
@@ -38,7 +38,7 @@ describe('RankingContainer', () => {
         title: 'Test Title',
         labels: [],
         topRank: true,
-        draggable: false
+        isDraggable: false
       }
     })
 
@@ -52,7 +52,7 @@ describe('RankingContainer', () => {
         title: 'Test Title',
         labels: [],
         topRank: false,
-        draggable: true
+        isDraggable: true
       }
     })
 
@@ -78,7 +78,7 @@ describe('RankingContainer', () => {
           'eazezaeza'
         ],
         topRank: false,
-        draggable: true
+        isDraggable: true
       }
     })
 
