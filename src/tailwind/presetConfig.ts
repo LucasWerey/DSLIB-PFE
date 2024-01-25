@@ -128,5 +128,7 @@ export const colorsPalette = {
   powder: '#A9BCD0',
   platinum: '#D8DBE2',
   error: '#F22B00',
-  'error-light': '#00F2A5'
+  errorLight: '#00F2A5',
+  lightmoonstone: '#58A4B01A',
+  warning: '#FFC85C'
 }

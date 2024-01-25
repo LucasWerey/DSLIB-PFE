@@ -28,6 +28,8 @@ declare module 'vue' {
     'InputField.story': typeof import('./components/CTA/InputField/InputField.story.vue')['default']
     Loader: typeof import('./components/Indicators/Loader/Loader.vue')['default']
     'Loader.story': typeof import('./components/Indicators/Loader/Loader.story.vue')['default']
+    OfferCard: typeof import('./components/Containment/OfferCard/OfferCard.vue')['default']
+    'OfferCard.story': typeof import('./components/Containment/OfferCard/OfferCard.story.vue')['default']
     RankingContainer: typeof import('./components/Containment/RankingContainer/RankingContainer.vue')['default']
     'RankingContainer.story': typeof import('./components/Containment/RankingContainer/RankingContainer.story.vue')['default']
     SelectField: typeof import('./components/CTA/SelectField/SelectField.vue')['default']

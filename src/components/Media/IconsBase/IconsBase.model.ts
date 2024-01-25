@@ -48,7 +48,8 @@ export const ICONS_NAME = {
   userCog: 'userCog',
   userRoundx: 'userRoundx',
   video: 'video',
-  dribble: 'dribble'
+  dribble: 'dribble',
+  desktop: 'desktop'
 } as const
 
 export const ICONS_NAMES = Object.values(ICONS_NAME)
