@@ -1,46 +1,20 @@
 <script setup lang="ts">
 import './assets/index.css'
-
-import RankingContainer from './components/Containment/RankingContainer'
+const names = ['Lucas', 'Baptiste', 'Rose', 'Marine']
 </script>
 
 <template>
   <div class="flex h-[100vh] w-[100vw] flex-col gap-5 bg-basic-lightgrey p-2">
-    <RankingContainer title="Mots clés" :labels="['Yo', 'Suuuu']" />
-    <RankingContainer
-      title="Transports utilisés"
-      :labels="[
-        'Yo',
-        'Suuuu',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo',
-        'Yo'
-      ]"
-      top-rank
-      draggable
+    <OfferCard type="empty" />
+    <OfferCard
+      type="fill"
+      contractDuration="2 mois"
+      contractType="stage"
+      title="Dév web"
+      location="Paris"
+      :nCandidates="38"
+      :studentNames="names"
+      desktopColor="warning"
     />
   </div>
 </template>

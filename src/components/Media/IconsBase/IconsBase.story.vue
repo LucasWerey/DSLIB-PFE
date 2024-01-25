@@ -173,6 +173,9 @@
     <Variant title="video" auto-props-disabled>
       <IconsBase name="video" color="moonstone" :size="controls.size" />
     </Variant>
+    <Variant title="desktop" auto-props-disabled>
+      <IconsBase name="desktop" color="moonstone" :size="controls.size" />
+    </Variant>
 
     <Variant title="linkedin" auto-props-disabled>
       <IconsBase name="linkedin" :size="controls.size" />
