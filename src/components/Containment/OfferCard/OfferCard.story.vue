@@ -41,7 +41,7 @@
       </ControlDescription>
     </template>
 
-    <template #default>
+    <Variant title="playground" auto-props-disabled>
       <OfferCard
         :type="controls.type"
         :title="controls.title"
@@ -55,7 +55,7 @@
         @seeOffer="() => {}"
         @createOffer="() => {}"
       />
-    </template>
+    </Variant>
   </Story>
 </template>
 
