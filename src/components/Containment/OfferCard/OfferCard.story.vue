@@ -33,6 +33,9 @@
         <HstText v-model="controls.studentNames" title="Student names" />
       </ControlDescription>
       <ControlDescription>
+        <HstNumber v-model="controls.notification" title="Number of notif" />
+      </ControlDescription>
+      <ControlDescription>
         <HstSelect
           v-model="controls.desktopColor"
           :options="Object.keys(colorsPalette)"
@@ -52,6 +55,7 @@
         :id="controls.id"
         :student-names="controls.studentNames"
         :desktop-color="controls.desktopColor"
+        :notification="controls.notification"
         @seeOffer="() => {}"
         @createOffer="() => {}"
       />
@@ -75,6 +79,7 @@ interface Controls {
   id: string
   studentNames: string[]
   desktopColor: IconsColor
+  notification: number
 }
 
 const controls = reactive<Controls>({
@@ -86,6 +91,7 @@ const controls = reactive<Controls>({
   contractDuration: 'default',
   id: '2323232',
   studentNames: ['Pierre', 'Paul', 'Jacques', 'Thiery'],
-  desktopColor: 'warning'
+  desktopColor: 'warning',
+  notification: 0
 })
 </script>

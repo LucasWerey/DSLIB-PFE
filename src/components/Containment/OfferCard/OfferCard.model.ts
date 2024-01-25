@@ -31,4 +31,4 @@ export const OFFER_CARD_TYPE = {
 
 export const OFFER_CARD_TYPES = Object.values(OFFER_CARD_TYPE)
 export type OfferCardType = (typeof OFFER_CARD_TYPES)[number]
-export const OFFER_CARD_TYPE_DEFAULT = OFFER_CARD_TYPE.empty
+export const OFFER_CARD_TYPE_DEFAULT = OFFER_CARD_TYPE.fill

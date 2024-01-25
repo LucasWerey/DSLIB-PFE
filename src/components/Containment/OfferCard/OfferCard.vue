@@ -11,7 +11,7 @@
     </div>
     <div
       v-if="!isEmpty"
-      class="flex h-full w-full flex-col items-center justify-between rounded-xl bg-basic-white p-4"
+      class="relative flex h-full w-full flex-col items-center justify-between rounded-xl bg-basic-white p-4"
     >
       <div class="flex w-full flex-col gap-1">
         <IconsBase name="desktop" :color="desktopColor" />
@@ -51,6 +51,14 @@
         >
           Consulter l’espace de l’offre
         </Button>
+      </div>
+      <div
+        class="absolute right-0 flex h-4 w-28 items-center justify-end rounded-l-md bg-error px-2 drop-shadow-md"
+        v-if="hasNewNotifications"
+      >
+        <p class="text-nowrap font-eina1 text-1 text-basic-white">
+          + {{ notification }} nouveaux profils
+        </p>
       </div>
     </div>
   </div>
@@ -96,6 +104,10 @@ const props = defineProps({
   },
   desktopColor: {
     type: String as PropType<IconsColor>
+  },
+  notification: {
+    type: Number as PropType<number>,
+    default: 0
   }
 })
 
@@ -108,6 +120,8 @@ const contractDuration = computed(() => props.contractDuration)
 const id = computed(() => props.id)
 const studentNames = computed(() => props.studentNames)
 const desktopColor = computed(() => props.desktopColor)
+const notification = computed(() => props.notification)
+const hasNewNotifications = computed(() => notification.value > 0)
 
 const emit = defineEmits(['seeOffer', 'createOffer'])
 </script>
