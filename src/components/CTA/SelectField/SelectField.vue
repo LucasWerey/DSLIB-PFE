@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-[72px] w-[200px] flex-col gap-2">
+  <div class="flex h-[72px] w-[200px] flex-col gap-2" @focusout="open = false">
     <h1 class="font-eina1 text-2 font-bold uppercase text-basic-black">
       {{ title }}
     </h1>
@@ -18,7 +18,7 @@
           color="darkgrey"
         />
       </div>
-      <div class="items absolute z-10 w-full" v-show="open">
+      <div class="items scrollbar absolute z-10 max-h-[150px] w-full overflow-auto" v-show="open">
         <div
           v-for="(option, i) of options"
           :key="i"
@@ -75,3 +75,24 @@ const handleClick = (option: SelectFieldOption) => {
 
 const emit = defineEmits(['update:modelValue'])
 </script>
+
+<style scoped>
+.scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  @apply bg-primary-lightmoonstone;
+  border-radius: 40px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-primary-moonstone;
+  border-radius: 40px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-moonstone;
+  border-radius: 40px;
+}
+</style>

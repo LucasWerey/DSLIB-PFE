@@ -36,6 +36,10 @@ const controls = reactive<Controls>({
     { value: 'Mois', label: 'Mois' },
     { value: 'Années', label: 'Années' },
     { value: 'Semaines', label: 'Semaines' },
+    { value: 'Jours', label: 'Jours' },
+    { value: 'Jours', label: 'Jours' },
+    { value: 'Jours', label: 'Jours' },
+    { value: 'Jours', label: 'Jours' },
     { value: 'Jours', label: 'Jours' }
   ],
   default: 'Mois',

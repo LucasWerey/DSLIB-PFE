@@ -39,7 +39,7 @@
             />
           </div>
           <p class="font-eina1 text-3 font-semibold text-basic-black">
-            {{ nCandidates }} candidats
+            {{ nCandidates ?? 0 }} {{ (nCandidates ?? 0) > 1 ? 'candidats' : 'candidat' }}
           </p>
         </div>
         <Button
