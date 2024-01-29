@@ -22,6 +22,8 @@ declare module 'vue' {
     ControlDescription: typeof import('./../histoire/components/internals/ControlDescription.vue')['default']
     DeleteModal: typeof import('./components/Indicators/DeleteModal/DeleteModal.vue')['default']
     'DeleteModal.story': typeof import('./components/Indicators/DeleteModal/DeleteModal.story.vue')['default']
+    DemandCard: typeof import('./components/Containment/DemandCard/DemandCard.vue')['default']
+    'DemandCard.story': typeof import('./components/Containment/DemandCard/DemandCard.story.vue')['default']
     IconsBase: typeof import('./components/Media/IconsBase/IconsBase.vue')['default']
     'IconsBase.story': typeof import('./components/Media/IconsBase/IconsBase.story.vue')['default']
     InputField: typeof import('./components/CTA/InputField/InputField.vue')['default']

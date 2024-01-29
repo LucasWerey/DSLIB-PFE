@@ -18,3 +18,4 @@ export { default as DeleteModal } from './components/Indicators/DeleteModal'
 export { default as RankingContainer } from './components/Containment/RankingContainer'
 export { default as SelectField } from './components/CTA/SelectField'
 export { default as  OfferCard } from './components/Containment/OfferCard';
+export { default as  DemandCard } from './components/Containment/DemandCard';

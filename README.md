@@ -60,7 +60,7 @@ You will find the last version of the library here : https://github.com/LucasWer
 In your main project import the library :
 
 ```bash
-yarn add @lucaswerey/dslib-pfe@0.0.57
+yarn add @lucaswerey/dslib-pfe@0.0.70
 ```
 
 ## Use docker
