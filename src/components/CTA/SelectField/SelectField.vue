@@ -1,7 +1,7 @@
 <template>
   <div class="flex h-[72px] w-[200px] flex-col gap-2" @focusout="open = false">
     <h1 class="font-eina1 text-2 font-bold uppercase text-basic-black">
-      {{ title }}
+      {{ title + (isRequired ? ' ' : '') }}<span class="text-error" v-if="isRequired">*</span>
     </h1>
     <div class="relative h-full w-full text-left outline-none">
       <div
@@ -50,9 +50,15 @@ const props = defineProps({
     type: Array as PropType<SelectFieldOption[]>,
     required: true
   },
+  isRequired: {
+    type: Boolean,
+    default: false
+  },
   default: { String, required: true },
   title: { String, required: true }
 })
+
+const isRequired = computed(() => props.isRequired)
 
 const selectedValue: Ref<string> = ref('')
 const selected = computed(() => {

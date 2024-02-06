@@ -7,6 +7,9 @@
       <ControlDescription>
         <HstText v-model="controls.title" :options="title" title="Title" />
       </ControlDescription>
+      <ControlDescription>
+        <HstCheckbox v-model="controls.isRequired" title="isRequired" />
+      </ControlDescription>
     </template>
     <Variant title="Playground" :auto-props-disabled="true">
       <div class="h-[30vh]">
@@ -14,6 +17,7 @@
           :options="options"
           :default="controls.default"
           :title="controls.title"
+          :isRequired="controls.isRequired"
           @update:modelValue="logEvent('update', $event)"
         />
       </div>
@@ -29,6 +33,7 @@ interface Controls {
   options: SelectFieldOption[]
   default: string
   title: string
+  isRequired: boolean
 }
 
 const controls = reactive<Controls>({
@@ -43,7 +48,8 @@ const controls = reactive<Controls>({
     { value: 'Jours', label: 'Jours' }
   ],
   default: 'Mois',
-  title: 'Date'
+  title: 'Date',
+  isRequired: true
 })
 
 const options = computed(() => controls.options)
