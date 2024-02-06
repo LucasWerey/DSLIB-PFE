@@ -57,7 +57,7 @@ module.exports = {
     },
     fontFamilly: {
       default: ['Inter', 'sans-serif'],
-      second: ['Eina', 'sans-serif']
+      second: ['Eina1', 'sans-serif']
     }
   },
   plugins: [
@@ -86,22 +86,22 @@ module.exports = {
         '.DS-text-body': {
           fontSize: theme('fontSize.4'),
           fontWeight: 400,
-          fontFamilly: theme('fontFamilly.second')
+          fontFamily: theme('fontFamilly.second')
         },
         '.DS-text-body-bold': {
           fontSize: theme('fontSize.4'),
           fontWeight: 700,
-          fontFamilly: theme('fontFamilly.second')
+          fontFamily: theme('fontFamilly.second')
         },
         '.DS-text-small': {
           fontSize: theme('fontSize.3'),
           fontWeight: 400,
-          fontFamilly: theme('fontFamilly.second')
+          fontFamily: theme('fontFamilly.second')
         },
         '.DS-text-preTitle': {
           fontSize: theme('fontSize.2'),
           fontWeight: 700,
-          fontFamilly: theme('fontFamilly.second'),
+          fontFamily: theme('fontFamilly.second'),
           letterSpacing: '3%'
         },
         '.DS-text-btn': {

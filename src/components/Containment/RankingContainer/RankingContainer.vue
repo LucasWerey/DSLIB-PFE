@@ -15,16 +15,16 @@
       >
         <p class="rotate-90" :class="topRankClassSeparator">|||</p>
       </div>
-      <div class="flex h-full w-fit min-w-0 flex-row items-center gap-1 sm:gap-5">
+      <div class="flex h-full w-fit w-full min-w-0 flex-row items-center gap-1 sm:gap-5">
         <div
-          class="flex items-center font-eina1 text-1 font-semibold text-basic-black sm:whitespace-nowrap sm:text-4"
+          class="flex items-center font-eina1 text-4 font-semibold text-basic-black sm:whitespace-nowrap"
           data-test="title"
         >
           {{ title }}
         </div>
         <div class="flex items-center text-4" :class="topRankClassSeparator">|</div>
         <div
-          class="scrollbar-hide flex min-w-0 cursor-grab select-none flex-row items-center gap-2 overflow-x-scroll pr-2"
+          class="scrollbar-hide flex w-full cursor-grab select-none flex-row items-center gap-2 overflow-x-scroll pr-2"
           @mousedown="handleMouseDown"
           @mousemove="handleMouseMove"
           @mouseup="handleMouseUp"
