@@ -19,4 +19,3 @@ export { default as RankingContainer } from './components/Containment/RankingCon
 export { default as SelectField } from './components/CTA/SelectField'
 export { default as  OfferCard } from './components/Containment/OfferCard';
 export { default as  DemandCard } from './components/Containment/DemandCard';
-export { default as  MatchContainer } from './components/Containment/MatchContainer';
